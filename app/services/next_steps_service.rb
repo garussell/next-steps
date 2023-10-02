@@ -23,6 +23,6 @@ class NextStepsService
   end
   
   def self.conn
-    Faraday.new(url: "http://localhost:3000/api/v0/")
+    Faraday.new(url: "https://next-steps-xu92.onrender.com/api/v0/")
   end
 end
