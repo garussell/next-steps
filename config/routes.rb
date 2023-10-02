@@ -3,8 +3,10 @@ Rails.application.routes.draw do
 
   # Register and Login
   namespace :register do
-    resources :providers
+    resources :providers, only: [:new, :create, :edit, :update]
   end
+
+  delete '/register/providers/:id', to: 'register/providers#destroy', as: :delete_provider
 
   namespace :admin do
     resources :dashboard, only: [:index] do

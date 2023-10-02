@@ -13,7 +13,7 @@ admin_user = User.create!(
   role: "admin",
   status: "approved"
 )
-
+puts "admin_user created"
 
 # Users
 user1 = User.create!(

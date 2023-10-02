@@ -4,7 +4,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by(id: params[:id])
-    
+    @providers = Provider.where(id: @user.provider_id.to_i) unless @user.nil?
     if @user.nil? || current_user != @user
       flash[:warning] = "You must be logged in to access this page."
       redirect_to users_login_path
@@ -64,8 +64,6 @@ class UsersController < ApplicationController
     flash[:success] = "Your account has been successfully deleted."
     redirect_to root_path
   end
-  
-  # def login_form; end
   
   private
 

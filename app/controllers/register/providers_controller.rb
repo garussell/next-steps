@@ -4,11 +4,50 @@ class Register::ProvidersController < ApplicationController
   def new; end
 
   def create
-    if !provider_params_valid?
-      
+    if provider_params_valid?
+      user = User.find_by(id: session[:user_id])
+  
+      if user
+        @provider = Provider.create!(provider_params)
+        user.update(provider: true, provider_id: @provider.id)
+        flash[:success] = "Provider successfully created"
+        redirect_to user_path(user)
+      end
+    else
       flash[:warning] = "Invalid entries, please try again"
       redirect_to new_register_provider_path
     end
+  end  
+
+  def edit
+    if !session[:user_id]
+      flash[:warning] = "You must be logged in to access this page."
+      redirect_to users_login_path
+    else
+      user = User.find_by(id: session[:user_id])
+      @provider = Provider.find(params[:id])
+    end
+  end
+
+  def update
+    user = User.find_by(id: session[:user_id])
+    @provider = Provider.find(params[:id])
+  
+    if @provider.update(provider_params)
+      flash[:success] = "Provider successfully updated"
+      redirect_to user_path(user)
+    else
+      flash[:warning] = "Invalid entries, please try again"
+      redirect_to edit_register_provider_path(@provider)
+    end
+  end
+
+  def destroy
+    user = User.find_by(id: session[:user_id])
+    provider = Provider.find(params[:id])
+    provider.destroy
+    flash[:success] = "Provider deleted successfully"
+    redirect_to user_path(user)
   end  
 
   private
