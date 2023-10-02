@@ -6,11 +6,53 @@
 <% end %>
 <br/>
 
-<% if current_agent? && approved? %>
-  <p><%= link_to 'Add My Service', new_register_provider_path %></p>
-<% elsif current_user && !current_agent? %>
-  <h3>My Favorite Providers</h3>
-  
+<% if !@providers.present? %>
+  <% if current_agent? && approved? %>
+    <p><%= link_to 'Add My Service', new_register_provider_path %></p>
+  <% elsif current_user && !current_agent? %>
+    <h3>My Favorite Providers</h3>
+  <% end %>
+<% else %>
+  <% if current_agent? && approved? %>
+    <h3>My Services</h3>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Category</th>
+          <th>Fees</th>
+          <th>Location</th>
+          <th>Phone</th>
+          <th>Schedule</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @providers.each do |provider| %>
+          <tr>
+            <td><%= provider.name %></td>
+            <td><%= provider.description %></td>
+            <td><%= provider.fees %></td>
+            <td><%= "#{provider.street} #{provider.city.upcase}, #{provider.state.upcase} #{provider.zipcode}" %></td>
+            <td><%= provider.phone %></td>
+            <td><%= provider.schedule %></td>
+            <td>
+              
+              <%= link_to 'Edit', edit_register_provider_path(provider), class: 'edit-button' %>
+              <%= form_for provider, url: delete_provider_path(provider), method: :delete, html: { class: 'delete-form' } do |f| %>
+                <%= f.button "Delete", class: 'delete-button' %>
+              <% end %>
+
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+  <% elsif current_user && !current_agent? %>
+    <h3>My Favorite Providers</h3>
+  <% end %>
+
 <% end %>
+
+
+  
 
 

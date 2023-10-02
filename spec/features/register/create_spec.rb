@@ -37,23 +37,24 @@ RSpec.describe "Provider Registration Page", :vcr do
         expect(page).to have_button("Submit")
       end
 
-      # Validate params on the front-end
-      it "SAD PATH:  If I fail to fill in a username , I remain on the same page and see an error message, 'Invalid entries, please try again'" do
-        # fill_in "username", with: "my_username"
+      it "I can fill in the form and submit it" do
         fill_in "name", with: "Housing Option"
         fill_in "street", with: "123 Street Street"
         fill_in "city", with: "Townsville"
         fill_in "state", with: "UI"
         fill_in "zipcode", with: "11111"
         fill_in "phone", with: "3334445555"
+        fill_in "fees", with: "None"
+        fill_in "schedule", with: "M-F 9-5"
         fill_in "description", with: "I have housing"
 
         click_button "Submit"
 
-        expect(current_path).to eq(new_register_provider_path)
-        expect(page).to have_content("Invalid entries, please try again")
+        expect(current_path).to eq(user_path(@user1))
+        expect(page).to have_content("Provider successfully created")
       end
 
+      # Validate params on the front-end
       it "SAD PATH: If I do not fill in my organization name it errors" do
         # fill_in "name", with: "Housing Option"
         fill_in "street", with: "123 Street Street"
@@ -61,6 +62,8 @@ RSpec.describe "Provider Registration Page", :vcr do
         fill_in "state", with: "UI"
         fill_in "zipcode", with: "11111"
         fill_in "phone", with: "3334445555"
+        fill_in "fees", with: "None"
+        fill_in "schedule", with: "M-F 9-5"
         fill_in "description", with: "I have housing"
 
         click_button "Submit"
@@ -76,6 +79,8 @@ RSpec.describe "Provider Registration Page", :vcr do
         fill_in "state", with: "UI"
         fill_in "zipcode", with: "11111"
         fill_in "phone", with: "3334445555"
+        fill_in "fees", with: "None"
+        fill_in "schedule", with: "M-F 9-5"
         fill_in "description", with: "I have housing"
 
         click_button "Submit"
@@ -91,6 +96,8 @@ RSpec.describe "Provider Registration Page", :vcr do
         fill_in "state", with: "UI"
         fill_in "zipcode", with: "11111"
         fill_in "phone", with: "3334445555"
+        fill_in "fees", with: "None"
+        fill_in "schedule", with: "M-F 9-5"
         fill_in "description", with: "I have housing"
 
         click_button "Submit"
@@ -106,6 +113,8 @@ RSpec.describe "Provider Registration Page", :vcr do
         # fill_in "state", with: "UI"
         fill_in "zipcode", with: "11111"
         fill_in "phone", with: "3334445555"
+        fill_in "fees", with: "None"
+        fill_in "schedule", with: "M-F 9-5"
         fill_in "description", with: "I have housing"
 
         click_button "Submit"
@@ -121,6 +130,8 @@ RSpec.describe "Provider Registration Page", :vcr do
         fill_in "state", with: "UI"
         # fill_in "zipcode", with: "11111"
         fill_in "phone", with: "3334445555"
+        fill_in "fees", with: "None"
+        fill_in "schedule", with: "M-F 9-5"
         fill_in "description", with: "I have housing"
 
         click_button "Submit"
@@ -136,6 +147,8 @@ RSpec.describe "Provider Registration Page", :vcr do
         fill_in "state", with: "UI"
         fill_in "zipcode", with: "11111"
         # fill_in "phone", with: "3334445555"
+        fill_in "fees", with: "None"
+        fill_in "schedule", with: "M-F 9-5"
         fill_in "description", with: "I have housing"
 
         click_button "Submit"
@@ -151,6 +164,42 @@ RSpec.describe "Provider Registration Page", :vcr do
         fill_in "state", with: "UI"
         fill_in "zipcode", with: "11111"
         fill_in "phone", with: "3334445555"
+        # fill_in "fees", with: "None"
+        fill_in "schedule", with: "M-F 9-5"
+        fill_in "description", with: "I have housing"
+
+        click_button "Submit"
+  
+        expect(current_path).to eq(new_register_provider_path)
+        expect(page).to have_content("Invalid entries, please try again")
+      end
+
+      it "SAD PATH: If I do not fill in my description it errors" do
+        fill_in "name", with: "Housing Option"
+        fill_in "street", with: "123 Street Street"
+        fill_in "city", with: "Townsville"
+        fill_in "state", with: "UI"
+        fill_in "zipcode", with: "11111"
+        fill_in "phone", with: "3334445555"
+        fill_in "fees", with: "None"
+        # fill_in "schedule", with: "M-F 9-5"
+        fill_in "description", with: "I have housing"
+
+        click_button "Submit"
+  
+        expect(current_path).to eq(new_register_provider_path)
+        expect(page).to have_content("Invalid entries, please try again")
+      end
+
+      it "SAD PATH: If I do not fill in my description it errors" do
+        fill_in "name", with: "Housing Option"
+        fill_in "street", with: "123 Street Street"
+        fill_in "city", with: "Townsville"
+        fill_in "state", with: "UI"
+        fill_in "zipcode", with: "11111"
+        fill_in "phone", with: "3334445555"
+        fill_in "fees", with: "None"
+        fill_in "schedule", with: "M-F 9-5"
         # fill_in "description", with: "I have housing"
 
         click_button "Submit"

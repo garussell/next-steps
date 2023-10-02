@@ -1,0 +1,15 @@
+<h2>Update Your Business Profile</h2>
+<p>
+  <%= form_with url: register_provider_path(@provider), method: :patch, local: true do |form| %>
+    <%= form.label :name, "Organization name" %> <%= form.text_field :name, size: "30" %><br/>
+    <%= form.label :street, "Street" %> <%= form.text_field :street, size: "30" %><br/>
+    <%= form.label :city, "City" %> <%= form.text_field :city, size: "30" %><br/>
+    <%= form.label :state, "State" %> <%= form.text_field :state, size: "30" %><br/>
+    <%= form.label :zipcode, "Zipcode" %> <%= form.text_field :zipcode, size: "30" %><br/>
+    <%= form.label :phone, "Contact phone" %> <%= form.text_field :phone, size: "30" %><br/>
+    <%= form.label :fees, "Fees" %> <%= form.text_field :fees, size: "30" %><br/>
+    <%= form.label :schedule, "Schedule" %> <%= form.text_field :schedule, size: "30" %><br/>
+    <%= form.label :description, "Description of services" %> <%= form.text_field :description, size: "30" %><br/>
+    <%= form.submit "Submit" %>
+  <% end %>
+</p>

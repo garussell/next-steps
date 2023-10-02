@@ -9,7 +9,7 @@ RSpec.describe "Category Show", :vcr do
           fill_in 'Enter your City, State, and/or Zip Code', with: 'Denver, Colorado'
           check('Urgent Care')
           check('Food')
-          click_button('Get Help!')
+          click_button('Get Help!', match: :first)
         end
         expect(current_path).to eq(search_results_path)
         first('a', text: "See more results").click
