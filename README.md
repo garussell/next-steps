@@ -2,7 +2,6 @@
 ### Monolith
 
 Deployment Link: [Next Steps](https://next-steps-xu92.onrender.com/)
-(Please note that Render's free tier requires patience while loading)
 
 Link to [Front-end Service](https://github.com/westonio/next-steps-front-end)<br/>
 Link to [Back-End Service](https://github.com/westonio/next-steps-back-end)
