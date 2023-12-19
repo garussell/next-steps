@@ -50,7 +50,7 @@ RSpec.describe "Admin Dashboard Page" do
       end
 
       it "when i click on 'Approve Agent' the agent moves to the Approved section and I see a success message, and a button appears to reject that agent" do
-     
+    
         within('div.pending-agents') do
           expect(page).to have_content(@agent1.username)
           click_button("Approve Agent", match: :first)

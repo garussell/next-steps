@@ -7,13 +7,15 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 # Admin Users Manual Login
+User.destroy_all
+
 admin_user = User.create!(
   username: "admin",
   password: "adminpassword",
   role: "admin",
   status: "approved"
 )
-
+puts "admin_user created"
 
 # Users
 user1 = User.create!(

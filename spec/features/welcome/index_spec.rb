@@ -52,7 +52,7 @@ RSpec.describe 'Welcome Page', :vcr do
       end
         
       it 'has a button "Get Urgent Services"' do
-        expect(page).to have_button('Get Help!')
+        expect(page).to have_button('Get Help!').twice
       end
         
       context 'using the form' do
@@ -60,7 +60,7 @@ RSpec.describe 'Welcome Page', :vcr do
           within('div.select-services') do
             check('Medicaid')
             expect(page).to have_checked_field('Medicaid')
-            click_button('Get Help!')
+            click_button('Get Help!', match: :first)
           end
 
           expect(page).to have_text('Please enter your city, state, and/or zip code')
@@ -71,7 +71,7 @@ RSpec.describe 'Welcome Page', :vcr do
             fill_in 'Enter your City, State, and/or Zip Code', with: 'Denver, Colorado'
           end
           
-          click_button('Get Help!')
+          click_button('Get Help!', match: :first)
           expect(page).to have_content('Please select at least one service')
         end
           
@@ -82,7 +82,7 @@ RSpec.describe 'Welcome Page', :vcr do
             
             expect(page.has_checked_field?('Urgent Care')).to eq(true)
             
-            click_button('Get Help!')
+            click_button('Get Help!', match: :first)
            
             expect(current_path).to eq(search_results_path)
           end
@@ -96,7 +96,7 @@ RSpec.describe 'Welcome Page', :vcr do
           fill_in 'Enter your City, State, and/or Zip Code', with: 'Denver, Colorado'
           check('Urgent Care')
           check('Food')
-          click_button('Get Help!')
+          click_button('Get Help!', match: :first)
         end
         
         expect(current_path).to eq(search_results_path)
@@ -146,7 +146,7 @@ RSpec.describe 'Welcome Page', :vcr do
         it 'shows error if no location information is provided' do
           within('div.select-services') do
             check('Medicaid')
-            click_button('Get Help!')
+            click_button('Get Help!', match: :first)
           end
           
           expect(page).to have_content('Please enter your city, state, and/or zip code')
@@ -155,7 +155,7 @@ RSpec.describe 'Welcome Page', :vcr do
         it 'shows error if no service is selected' do
           within('div.select-services') do
             fill_in 'Enter your City, State, and/or Zip Code', with: 'Denver, Colorado'
-            click_button('Get Help!')
+            click_button('Get Help!', match: :first)
           end
           
           expect(page).to have_content('Please select at least one service')
@@ -168,7 +168,7 @@ RSpec.describe 'Welcome Page', :vcr do
             
             expect(page.has_checked_field?('Medicaid')).to eq(true)
             
-            click_button('Get Help!')
+            click_button('Get Help!', match: :first)
             
             expect(current_path).to eq(search_results_path)
           end
@@ -182,7 +182,7 @@ RSpec.describe 'Welcome Page', :vcr do
           fill_in 'Enter your City, State, and/or Zip Code', with: 'Denver, Colorado'
           check('Medicaid')
           check('Housing')
-          click_button('Get Help!')
+          click_button('Get Help!', match: :first)
         end
         
         expect(current_path).to eq(search_results_path)
