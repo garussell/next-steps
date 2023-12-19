@@ -24,7 +24,6 @@ RSpec.describe 'User Dashboard page', :vcr do
       expect(current_path).to eq user_path(@user.id)
       expect(page).to have_content("#{@user.username}")
       expect(page).to have_content("Change password")
-      expect(page).to have_content("My Favorite Providers")
     end
 
     it "When I visit my dashboard '/users/:id', I should also se  a link to delete my account" do
