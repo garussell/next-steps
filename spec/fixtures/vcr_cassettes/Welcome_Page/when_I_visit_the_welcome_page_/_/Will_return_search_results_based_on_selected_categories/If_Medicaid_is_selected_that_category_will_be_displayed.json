@@ -3,56 +3,7 @@
     {
       "request": {
         "method": "get",
-        "uri": "https://ancient-reaches-38594-79ad833137d5.herokuapp.com/api/v0/search?keyword=Medicaid&location=Denver,%20Colorado",
-        "body": {
-          "encoding": "US-ASCII",
-          "string": ""
-        },
-        "headers": {
-          "User-Agent": [
-            "Faraday v2.7.11"
-          ],
-          "Accept-Encoding": [
-            "gzip;q=1.0,deflate;q=0.6,identity;q=0.3"
-          ],
-          "Accept": [
-            "*/*"
-          ]
-        }
-      },
-      "response": {
-        "status": {
-          "code": 404,
-          "message": "Not Found"
-        },
-        "headers": {
-          "Content-Length": [
-            "563"
-          ],
-          "Cache-Control": [
-            "no-cache, no-store"
-          ],
-          "Content-Type": [
-            "text/html; charset=utf-8"
-          ],
-          "Date": [
-            "2023-09-29 16:19:53.300064658 +0000 UTC"
-          ],
-          "Server": [
-            "heroku-router"
-          ]
-        },
-        "body": {
-          "encoding": "UTF-8",
-          "string": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <meta charset=\"utf-8\">\n    <title>Heroku | Application Error</title>\n    <style media=\"screen\">\n      html,body,iframe {\n        margin: 0;\n        padding: 0;\n      }\n      html,body {\n        height: 100%;\n        overflow: hidden;\n      }\n      iframe {\n        width: 100%;\n        height: 100%;\n        border: 0;\n      }\n    </style>\n  </head>\n  <body>\n    <iframe src=\"//www.herokucdn.com/error-pages/no-such-app.html\"></iframe>\n  </body>\n</html>\n"
-        }
-      },
-      "recorded_at": "Fri, 29 Sep 2023 16:19:53 GMT"
-    },
-    {
-      "request": {
-        "method": "get",
-        "uri": "http://localhost:3000/api/v0/search?keyword=Medicaid&location=Denver,%20Colorado",
+        "uri": "https://next-steps-xu92.onrender.com/api/v0/search?keyword=Medicaid&location=Denver,%20Colorado",
         "body": {
           "encoding": "US-ASCII",
           "string": ""
@@ -75,11 +26,38 @@
           "message": "OK"
         },
         "headers": {
-          "X-Frame-Options": [
-            "SAMEORIGIN"
+          "Date": [
+            "Tue, 19 Dec 2023 17:12:27 GMT"
           ],
-          "X-Xss-Protection": [
-            "0"
+          "Content-Type": [
+            "application/json; charset=utf-8"
+          ],
+          "Transfer-Encoding": [
+            "chunked"
+          ],
+          "Connection": [
+            "keep-alive"
+          ],
+          "Cf-Ray": [
+            "8381453becf81f29-DEN"
+          ],
+          "Cf-Cache-Status": [
+            "DYNAMIC"
+          ],
+          "Cache-Control": [
+            "max-age=0, private, must-revalidate"
+          ],
+          "Etag": [
+            "W/\"c56d750de1c08c9f72c4bef5a054002f\""
+          ],
+          "Vary": [
+            "Accept-Encoding"
+          ],
+          "Referrer-Policy": [
+            "strict-origin-when-cross-origin"
+          ],
+          "Rndr-Id": [
+            "5dba2447-805a-4dc5"
           ],
           "X-Content-Type-Options": [
             "nosniff"
@@ -87,48 +65,42 @@
           "X-Download-Options": [
             "noopen"
           ],
+          "X-Frame-Options": [
+            "SAMEORIGIN"
+          ],
           "X-Permitted-Cross-Domain-Policies": [
             "none"
           ],
-          "Referrer-Policy": [
-            "strict-origin-when-cross-origin"
-          ],
-          "Content-Type": [
-            "application/json; charset=utf-8"
-          ],
-          "Vary": [
-            "Accept"
-          ],
-          "Etag": [
-            "W/\"f9e79d283fa879ed5cc0e18bb3fb3940\""
-          ],
-          "Cache-Control": [
-            "max-age=0, private, must-revalidate"
+          "X-Render-Origin-Server": [
+            "Render"
           ],
           "X-Request-Id": [
-            "423b1d2a-3703-4984-92b9-f41b8efe74af"
+            "a4519ed7-ec18-449d-b653-be523182c8b2"
           ],
           "X-Runtime": [
-            "0.505584"
+            "0.502246"
           ],
-          "Server-Timing": [
-            "start_processing.action_controller;dur=0.15, process_action.action_controller;dur=492.68"
+          "X-Xss-Protection": [
+            "0"
           ],
-          "Transfer-Encoding": [
-            "chunked"
+          "Server": [
+            "cloudflare"
+          ],
+          "Alt-Svc": [
+            "h3=\":443\"; ma=86400"
           ]
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"data\":[{\"id\":\"211colorad-a0h4T000002u03MQAQ\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"Medicaid\",\"provider_name\":\"HEALTH FIRST COLORADO\",\"street\":\"303 E 17th Ave\",\"city\":\"Denver\",\"state\":\"CO\",\"lat\":\"39.743280\",\"lon\":\"-104.982950\",\"description\":\"Offers public health insurance for Coloradans who qualify and a contact center for additional information on the programs offered. The Health First Colorado Contact Center offers information on:Health First Colorado (Colorado\\u0026#39;s Medicaid Program)Child Health Plan PlusLimited information on the Colorado Indigent Care Program (CICP)Members can also find doctors and specialists that accept Medicaid and check the status of an application.\"}},{\"id\":\"211colorad-a0h4T000002u7rZQAQ\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"Medicaid\",\"provider_name\":\"HEALTH FIRST COLORADO/MEDICAID AND CHP+\",\"street\":\"3815 Steele St\",\"city\":\"Denver\",\"state\":\"CO\",\"lat\":\"39.769410\",\"lon\":\"-104.950043\",\"description\":\"Provides free or low-cost public health insurance for Coloradans who qualify. Health First Colorado covers:Doctor visitsEmergency carePreventative care, such as screenings and immunizations\"}},{\"id\":\"211colorad-a0h4T00000aXZ1eQAG\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"Medicaid\",\"provider_name\":\"HEALTH FIRST COLORADO/MEDICAID AND CHP+\",\"street\":\"2929 W 10th Ave\",\"city\":\"Denver\",\"state\":\"CO\",\"lat\":\"39.733310\",\"lon\":\"-105.023770\",\"description\":\"Provides free or low-cost public health insurance for Coloradans who qualify. Health First Colorado covers:Doctor visitsEmergency carePreventative care, such as screenings and immunizations\"}},{\"id\":\"211colorad-a0h4T000002u7rFQAQ\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"Medicaid\",\"provider_name\":\"HEALTH FIRST COLORADO/MEDICAID AND CHP+\",\"street\":\"4685 Peoria St\",\"city\":\"Denver\",\"state\":\"CO\",\"lat\":\"39.781243\",\"lon\":\"-104.848602\",\"description\":\"Provides free or low-cost public health insurance for Coloradans who qualify. Health First Colorado covers:Doctor visitsEmergency carePreventative care, such as screenings and immunizations\"}},{\"id\":\"211colorad-a0h4T000002u7EiQAI\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"Medicaid\",\"provider_name\":\"MEDICAID \\u0026 CHP+\",\"street\":\"3155 N Chambers Rd\",\"city\":\"Aurora\",\"state\":\"CO\",\"lat\":\"39.761534\",\"lon\":\"-104.810766\",\"description\":\"Offers Medicaid and CHP+ for children, aged 0 - 19, and Medicaid for adults depending upon individual and family circumstances. Emergency-only Medicaid services are also available for non-citizens.\"}},{\"id\":\"211colorad-a0h4T000002u06sQAA\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"Medicaid\",\"provider_name\":\"HEALTH FIRST COLORADO/MEDICAID AND CHP+\",\"street\":\"14980 E Alameda Dr\",\"city\":\"Aurora\",\"state\":\"CO\",\"lat\":\"39.708669\",\"lon\":\"-104.814570\",\"description\":\"Provides: Medicaid public health insurance for low-income Coloradans Long-Term CareMay include nursing facility careHome and Community-Based Services (provides care in one\\u0026#39;s home)CHP+ health insurance for low-income children 18 years of age and under\"}},{\"id\":\"211colorad-a0h4T000002u0UXQAY\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"Medicaid\",\"provider_name\":\"CHILDREN'S EXTENSIVE SUPPORT\",\"street\":\"11177 W 8th Ave\",\"city\":\"Lakewood\",\"state\":\"CO\",\"lat\":\"39.729830\",\"lon\":\"-105.122882\",\"description\":\"Offers the Children\\u0026#39;s Extensive Support program (CES) which provides access to state Medicaid Plan benefits and specific Medicaid Waiver services and support.\"}},{\"id\":\"211colorad-a0h4T000002uJtNQAU\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"Medicaid\",\"provider_name\":\"HEALTH FIRST COLORADO/MEDICAID AND CHP+\",\"street\":\"1690 W Littleton Blvd\",\"city\":\"Littleton\",\"state\":\"CO\",\"lat\":\"39.613101\",\"lon\":\"-105.007680\",\"description\":\"Provides: Medicaid public health insurance for low-income Coloradans Long-Term CareMay include nursing facility careHome and Community-Based Services (provides care in one\\u0026#39;s home)CHP+ health insurance for low-income children 18 years of age and under\"}},{\"id\":\"211colorad-a0h4T000002u1CEQAY\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"Medicaid\",\"provider_name\":\"HEALTH FIRST COLORADO (COLORADO'S MEDICAID PROGRAM) AND CHP+ ENROLLMENT\",\"street\":\"11100 East Bethany Dr\",\"city\":\"Aurora\",\"state\":\"CO\",\"lat\":\"39.662880\",\"lon\":\"-104.858769\",\"description\":\"Provides certified application assistance, in-person and over the phone, for individuals enrolling in Health First Colorado (Colorado\\u0026#39;s Medicaid program) or Child Health Plan Plus (CHP+). Also, provides physician referrals.\"}},{\"id\":\"211miami-25647-9049\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"Medicaid\",\"provider_name\":\"MODIVCARE - TRANSPORTATION FOR MEDICAID RECEIPIENTS (NON-EMERGENCY MEDICAL TRANSPORTATION)\",\"street\":\"6900 Layton Avenue, Suite 1200\",\"city\":\"Denver\",\"state\":\"CO\",\"lat\":\"39.626816\",\"lon\":\"-104.906199\",\"description\":\"In order to take advantage of your health care benefit you need to get to your doctor’s appointment. Both state governments and Managed Care Organizations (MCOs) know that overall health care costs go down when people have appropriate access to health care. Transportation can bridge the gap. Drivers pick members up at their homes, take them to their appointments and bring them home in a timely manner.\\n\\n\\n\\n*** TRANSPORTATION ONLY FOR MEDICAID RECIPIENTS***\"}}]}"
+          "string": "{\"data\":[{\"id\":\"211colorad-a0h4T000002u03MQAQ\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"Medicaid\",\"provider_name\":\"HEALTH FIRST COLORADO\",\"street\":\"303 E 17th Ave\",\"city\":\"Denver\",\"state\":\"CO\",\"lat\":\"39.743300\",\"lon\":\"-104.983000\",\"description\":\"Offers public health insurance for Coloradans who qualify and a contact center for additional information on the programs offered. The Health First Colorado Contact Center offers information on:Health First Colorado (Colorado\\u0026#39;s Medicaid Program)Child Health Plan PlusLimited information on the Colorado Indigent Care Program (CICP)Members can also find doctors and specialists that accept Medicaid and check the status of an application.\"}},{\"id\":\"211colorad-a0h4T000002u7rFQAQ\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"Medicaid\",\"provider_name\":\"HEALTH FIRST COLORADO/MEDICAID AND CHP+\",\"street\":\"4685 Peoria St\",\"city\":\"Denver\",\"state\":\"CO\",\"lat\":\"39.781200\",\"lon\":\"-104.849000\",\"description\":\"Provides free or low-cost public health insurance for Coloradans who qualify. Health First Colorado covers:Doctor visitsEmergency carePreventative care, such as screenings and immunizations\"}},{\"id\":\"211colorad-a0hUk000000fQcrIAE\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"Medicaid\",\"provider_name\":\"HEALTH FIRST COLORADO/MEDICAID AND CHP+\",\"street\":\"2929 W 10th Ave\",\"city\":\"Denver\",\"state\":\"CO\",\"lat\":\"39.733300\",\"lon\":\"-105.024000\",\"description\":\"Provides free or low-cost public health insurance for Coloradans who qualify. Health First Colorado covers:Doctor visitsEmergency carePreventative care, such as screenings and immunizations\"}},{\"id\":\"211colorad-a0h4T000002u7rZQAQ\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"Medicaid\",\"provider_name\":\"HEALTH FIRST COLORADO/MEDICAID AND CHP+\",\"street\":\"3815 Steele St\",\"city\":\"Denver\",\"state\":\"CO\",\"lat\":\"39.769400\",\"lon\":\"-104.950000\",\"description\":\"Provides free or low-cost public health insurance for Coloradans who qualify. Health First Colorado covers:Doctor visitsEmergency carePreventative care, such as screenings and immunizations\"}},{\"id\":\"211colorad-a0h4T000002u7EiQAI\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"Medicaid\",\"provider_name\":\"MEDICAID \\u0026 CHP+\",\"street\":\"3155 N Chambers Rd\",\"city\":\"Aurora\",\"state\":\"CO\",\"lat\":\"39.761500\",\"lon\":\"-104.811000\",\"description\":\"Offers Medicaid and CHP+ for children, aged 0 - 19, and Medicaid for adults depending upon individual and family circumstances. Emergency-only Medicaid services are also available for non-citizens.\"}},{\"id\":\"211colorad-a0h4T000002u0UXQAY\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"Medicaid\",\"provider_name\":\"CHILDREN'S EXTENSIVE SUPPORT\",\"street\":\"11177 W 8th Ave\",\"city\":\"Lakewood\",\"state\":\"CO\",\"lat\":\"39.729800\",\"lon\":\"-105.123000\",\"description\":\"Offers the Children\\u0026#39;s Extensive Support program (CES) which provides access to state Medicaid Plan benefits and specific Medicaid Waiver services and support.\"}},{\"id\":\"211colorad-a0h4T000002uJtNQAU\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"Medicaid\",\"provider_name\":\"HEALTH FIRST COLORADO/MEDICAID AND CHP+\",\"street\":\"1690 W Littleton Blvd\",\"city\":\"Littleton\",\"state\":\"CO\",\"lat\":\"39.613100\",\"lon\":\"-105.008000\",\"description\":\"Provides: Medicaid public health insurance for low-income Coloradans Long-Term CareMay include nursing facility careHome and Community-Based Services (provides care in one\\u0026#39;s home)CHP+ health insurance for low-income children 18 years of age and under\"}},{\"id\":\"211colorad-a0h4T000002u06sQAA\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"Medicaid\",\"provider_name\":\"HEALTH FIRST COLORADO/MEDICAID AND CHP+\",\"street\":\"14980 E Alameda Dr\",\"city\":\"Aurora\",\"state\":\"CO\",\"lat\":\"39.708700\",\"lon\":\"-104.815000\",\"description\":\"Provides: Medicaid public health insurance for low-income Coloradans Long-Term CareMay include nursing facility careHome and Community-Based Services (provides care in one\\u0026#39;s home)CHP+ health insurance for low-income children 18 years of age and under\"}},{\"id\":\"211colorad-a0h4T000002u1CEQAY\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"Medicaid\",\"provider_name\":\"HEALTH FIRST COLORADO (COLORADO'S MEDICAID PROGRAM) AND CHP+ ENROLLMENT\",\"street\":\"11100 East Bethany Dr\",\"city\":\"Aurora\",\"state\":\"CO\",\"lat\":\"39.662900\",\"lon\":\"-104.859000\",\"description\":\"Provides certified application assistance, in-person and over the phone, for individuals enrolling in Health First Colorado (Colorado\\u0026#39;s Medicaid program) or Child Health Plan Plus (CHP+). Also, provides physician referrals.\"}},{\"id\":\"211miami-25647-9049\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"Medicaid\",\"provider_name\":\"MODIVCARE - TRANSPORTATION FOR MEDICAID RECEIPIENTS (NON-EMERGENCY MEDICAL TRANSPORTATION)\",\"street\":\"6900 Layton Avenue, Suite 1200\",\"city\":\"Denver\",\"state\":\"CO\",\"lat\":\"39.626816\",\"lon\":\"-104.906199\",\"description\":\"In order to take advantage of your health care benefit you need to get to your doctor’s appointment. Both state governments and Managed Care Organizations (MCOs) know that overall health care costs go down when people have appropriate access to health care. Transportation can bridge the gap. Drivers pick members up at their homes, take them to their appointments and bring them home in a timely manner.\\n\\n\\n\\n*** TRANSPORTATION ONLY FOR MEDICAID RECIPIENTS***\"}}]}"
         }
       },
-      "recorded_at": "Fri, 29 Sep 2023 16:40:00 GMT"
+      "recorded_at": "Tue, 19 Dec 2023 17:12:26 GMT"
     },
     {
       "request": {
         "method": "get",
-        "uri": "http://localhost:3000/api/v0/search?keyword=Housing&location=Denver,%20Colorado",
+        "uri": "https://next-steps-xu92.onrender.com/api/v0/search?keyword=Housing&location=Denver,%20Colorado",
         "body": {
           "encoding": "US-ASCII",
           "string": ""
@@ -151,11 +123,38 @@
           "message": "OK"
         },
         "headers": {
-          "X-Frame-Options": [
-            "SAMEORIGIN"
+          "Date": [
+            "Tue, 19 Dec 2023 17:12:28 GMT"
           ],
-          "X-Xss-Protection": [
-            "0"
+          "Content-Type": [
+            "application/json; charset=utf-8"
+          ],
+          "Transfer-Encoding": [
+            "chunked"
+          ],
+          "Connection": [
+            "keep-alive"
+          ],
+          "Cf-Ray": [
+            "838145419c015179-DEN"
+          ],
+          "Cf-Cache-Status": [
+            "DYNAMIC"
+          ],
+          "Cache-Control": [
+            "max-age=0, private, must-revalidate"
+          ],
+          "Etag": [
+            "W/\"fc858be65c6ebc2692686891c5ca0ca9\""
+          ],
+          "Vary": [
+            "Accept-Encoding"
+          ],
+          "Referrer-Policy": [
+            "strict-origin-when-cross-origin"
+          ],
+          "Rndr-Id": [
+            "a21430c1-27cd-4d63"
           ],
           "X-Content-Type-Options": [
             "nosniff"
@@ -163,43 +162,37 @@
           "X-Download-Options": [
             "noopen"
           ],
+          "X-Frame-Options": [
+            "SAMEORIGIN"
+          ],
           "X-Permitted-Cross-Domain-Policies": [
             "none"
           ],
-          "Referrer-Policy": [
-            "strict-origin-when-cross-origin"
-          ],
-          "Content-Type": [
-            "application/json; charset=utf-8"
-          ],
-          "Vary": [
-            "Accept"
-          ],
-          "Etag": [
-            "W/\"9b52fc1973911b6064fe91fcf7db5c47\""
-          ],
-          "Cache-Control": [
-            "max-age=0, private, must-revalidate"
+          "X-Render-Origin-Server": [
+            "Render"
           ],
           "X-Request-Id": [
-            "f64f8402-b274-4092-b8b5-2c46cb16296f"
+            "b940c972-f94b-4eca-8e2f-b30b3926a201"
           ],
           "X-Runtime": [
-            "0.438584"
+            "1.366162"
           ],
-          "Server-Timing": [
-            "start_processing.action_controller;dur=0.26, process_action.action_controller;dur=426.33"
+          "X-Xss-Protection": [
+            "0"
           ],
-          "Transfer-Encoding": [
-            "chunked"
+          "Server": [
+            "cloudflare"
+          ],
+          "Alt-Svc": [
+            "h3=\":443\"; ma=86400"
           ]
         },
         "body": {
-          "encoding": "UTF-8",
-          "string": "{\"data\":[{\"id\":\"211colorad-a0h4T000002u1BCQAY\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"Housing\",\"provider_name\":\"SENIOR DISABLED HOUSING OPTIONS\",\"street\":\"5808 S Rapp St\",\"city\":\"Littleton\",\"state\":\"CO\",\"lat\":\"39.612290\",\"lon\":\"-105.019780\",\"description\":\"Offers income-based rental homes for older adults and persons with disabilities.\"}},{\"id\":\"211colorad-a0h4T000002u0kbQAA\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"Housing\",\"provider_name\":\"HOUSING CHOICE VOUCHER PROGRAM\",\"street\":\"5808 S Rapp St\",\"city\":\"Littleton\",\"state\":\"CO\",\"lat\":\"39.612290\",\"lon\":\"-105.019780\",\"description\":\"Offers rental subsidies to private landlords through the Housing Choice Voucher program.\"}},{\"id\":\"211colorad-a0h4T000002tzjCQAQ\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"Housing\",\"provider_name\":\"PUBLIC HOUSING\",\"street\":\"3460 S Sherman St\",\"city\":\"Englewood\",\"state\":\"CO\",\"lat\":\"39.654061\",\"lon\":\"-104.984930\",\"description\":\"Offers several public housing options.\"}},{\"id\":\"211colorad-a0h4T000002tzi5QAA\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"Housing\",\"provider_name\":\"SUBSIDIZED HOUSING\",\"street\":\"2280 S Xanadu Way\",\"city\":\"Aurora\",\"state\":\"CO\",\"lat\":\"39.676015\",\"lon\":\"-104.831979\",\"description\":\"Provides subsidized housing.\"}},{\"id\":\"211colorad-a0h4T00000Xou7ZQAR\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"Housing\",\"provider_name\":\"SUBSIDIZED HOUSING\",\"street\":\"1385 S Irving St\",\"city\":\"Denver\",\"state\":\"CO\",\"lat\":\"39.691770\",\"lon\":\"-105.029730\",\"description\":\"Provides one-bedroom units for seniors and individuals with physical disabilities.\"}},{\"id\":\"211colorad-a0h4T000002u7JTQAY\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"Housing\",\"provider_name\":\"SUBSIDIZED HOUSING\",\"street\":\"6240 Smith Road\",\"city\":\"Denver\",\"state\":\"CO\",\"lat\":\"39.771910\",\"lon\":\"-105.006379\",\"description\":\"Provides one-bedroom units for seniors and individuals with physical disabilities.\"}},{\"id\":\"211colorad-a0h4T000002tzz8QAA\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"Housing\",\"provider_name\":\"AFFORDABLE HOUSING\",\"street\":\"1420 Logan St\",\"city\":\"Denver\",\"state\":\"CO\",\"lat\":\"39.738759\",\"lon\":\"-104.982168\",\"description\":\"Provides affordable housing. Activities are also available for tenants.\"}},{\"id\":\"211colorad-a0h4T000002tzz7QAA\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"Housing\",\"provider_name\":\"AFFORDABLE HOUSING\",\"street\":\"940 Emerson St\",\"city\":\"Denver\",\"state\":\"CO\",\"lat\":\"39.731097\",\"lon\":\"-104.976272\",\"description\":\"Offers affordable housing for eligible adults.\"}},{\"id\":\"211colorad-a0h4T000002u0zLQAQ\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"Housing\",\"provider_name\":\"HOUSING CHOICE VOUCHER LOTTERY\",\"street\":\"11941 W 48th Ave\",\"city\":\"Wheat Ridge\",\"state\":\"CO\",\"lat\":\"39.784660\",\"lon\":\"-105.132760\",\"description\":\"Accepts online applications for the Jefferson County Housing Authority (JCHA). Lottery applications will be randomly drawn. All applications rank (order of selection) will be posted at online. Selected applicants will be notified in writing and receive directions by mail on how to apply for the Section 8 Housing Choice Voucher Program.\"}},{\"id\":\"211colorad-a0h4T000002tzzAQAQ\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"Housing\",\"provider_name\":\"AFFORDABLE SENIOR HOUSING\",\"street\":\"1915 S Decatur St\",\"city\":\"Denver\",\"state\":\"CO\",\"lat\":\"39.681724\",\"lon\":\"-105.023230\",\"description\":\"Offers 10, 2 bedroom affordable housing units.\"}}]}"
+          "encoding": "ASCII-8BIT",
+          "string": "{\"data\":[{\"id\":\"211colorad-a0h4T000002u1BCQAY\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"Housing\",\"provider_name\":\"SENIOR DISABLED HOUSING OPTIONS\",\"street\":\"5808 S Rapp St\",\"city\":\"Littleton\",\"state\":\"CO\",\"lat\":\"39.612300\",\"lon\":\"-105.020000\",\"description\":\"Offers income-based rental homes for older adults and persons with disabilities.\"}},{\"id\":\"211colorad-a0h4T000002u0kbQAA\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"Housing\",\"provider_name\":\"HOUSING CHOICE VOUCHER PROGRAM\",\"street\":\"5808 S Rapp St\",\"city\":\"Littleton\",\"state\":\"CO\",\"lat\":\"39.612300\",\"lon\":\"-105.020000\",\"description\":\"Offers rental subsidies to private landlords through the Housing Choice Voucher program.\"}},{\"id\":\"211colorad-a0h4T000002tzi5QAA\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"Housing\",\"provider_name\":\"SUBSIDIZED HOUSING\",\"street\":\"2280 S Xanadu Way\",\"city\":\"Aurora\",\"state\":\"CO\",\"lat\":\"39.676000\",\"lon\":\"-104.832000\",\"description\":\"Provides subsidized housing.\"}},{\"id\":\"211colorad-a0h4T000002tzjCQAQ\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"Housing\",\"provider_name\":\"PUBLIC HOUSING\",\"street\":\"3460 S Sherman St\",\"city\":\"Englewood\",\"state\":\"CO\",\"lat\":\"39.654100\",\"lon\":\"-104.985000\",\"description\":\"Offers several public housing options.\"}},{\"id\":\"211colorad-a0h4T000002u7JTQAY\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"Housing\",\"provider_name\":\"SUBSIDIZED HOUSING\",\"street\":\"6240 Smith Road\",\"city\":\"Denver\",\"state\":\"CO\",\"lat\":\"39.771900\",\"lon\":\"-105.006000\",\"description\":\"Provides one-bedroom units for seniors and individuals with physical disabilities.\"}},{\"id\":\"211colorad-a0h4T00000Xou7ZQAR\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"Housing\",\"provider_name\":\"SUBSIDIZED HOUSING\",\"street\":\"1385 S Irving St\",\"city\":\"Denver\",\"state\":\"CO\",\"lat\":\"39.691800\",\"lon\":\"-105.030000\",\"description\":\"Provides one-bedroom units for seniors and individuals with physical disabilities.\"}},{\"id\":\"211colorad-a0h4T000002tzz8QAA\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"Housing\",\"provider_name\":\"AFFORDABLE HOUSING\",\"street\":\"1420 Logan St\",\"city\":\"Denver\",\"state\":\"CO\",\"lat\":\"39.738800\",\"lon\":\"-104.982000\",\"description\":\"Provides affordable housing. Activities are also available for tenants.\"}},{\"id\":\"211colorad-a0h4T000002u0zLQAQ\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"Housing\",\"provider_name\":\"HOUSING CHOICE VOUCHER LOTTERY\",\"street\":\"11941 W 48th Ave\",\"city\":\"Wheat Ridge\",\"state\":\"CO\",\"lat\":\"39.784700\",\"lon\":\"-105.133000\",\"description\":\"Accepts online applications for the Jefferson County Housing Authority (JCHA). Lottery applications will be randomly drawn. All applications rank (order of selection) will be posted at online. Selected applicants will be notified in writing and receive directions by mail on how to apply for the Section 8 Housing Choice Voucher Program.\"}},{\"id\":\"211colorad-a0h4T000002tzz7QAA\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"Housing\",\"provider_name\":\"AFFORDABLE HOUSING\",\"street\":\"940 Emerson St\",\"city\":\"Denver\",\"state\":\"CO\",\"lat\":\"39.731100\",\"lon\":\"-104.976000\",\"description\":\"Offers affordable housing for eligible adults.\"}},{\"id\":\"211colorad-a0h4T000002tzzBQAQ\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"Housing\",\"provider_name\":\"AFFORDABLE SENIOR HOUSING\",\"street\":\"1111 S Zuni St\",\"city\":\"Denver\",\"state\":\"CO\",\"lat\":\"39.696500\",\"lon\":\"-105.016000\",\"description\":\"Provides affordable senior housing.\"}}]}"
         }
       },
-      "recorded_at": "Fri, 29 Sep 2023 16:40:01 GMT"
+      "recorded_at": "Tue, 19 Dec 2023 17:12:28 GMT"
     }
   ],
   "recorded_with": "VCR 6.2.0"

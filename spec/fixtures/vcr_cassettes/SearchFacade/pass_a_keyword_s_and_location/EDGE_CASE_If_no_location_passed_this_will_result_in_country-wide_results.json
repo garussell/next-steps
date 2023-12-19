@@ -3,7 +3,7 @@
     {
       "request": {
         "method": "get",
-        "uri": "https://ancient-reaches-38594-79ad833137d5.herokuapp.com/api/v0/search?keyword=urgent%20care&location=",
+        "uri": "https://next-steps-xu92.onrender.com/api/v0/search?keyword=urgent%20care&location=",
         "body": {
           "encoding": "US-ASCII",
           "string": ""
@@ -22,37 +22,85 @@
       },
       "response": {
         "status": {
-          "code": 404,
-          "message": "Not Found"
+          "code": 200,
+          "message": "OK"
         },
         "headers": {
-          "Content-Length": [
-            "563"
-          ],
-          "Cache-Control": [
-            "no-cache, no-store"
+          "Date": [
+            "Tue, 19 Dec 2023 17:12:13 GMT"
           ],
           "Content-Type": [
-            "text/html; charset=utf-8"
+            "application/json; charset=utf-8"
           ],
-          "Date": [
-            "2023-09-29 16:19:49.073923743 +0000 UTC"
+          "Transfer-Encoding": [
+            "chunked"
+          ],
+          "Connection": [
+            "keep-alive"
+          ],
+          "Cf-Ray": [
+            "838144eb0b2e5342-DEN"
+          ],
+          "Cf-Cache-Status": [
+            "DYNAMIC"
+          ],
+          "Cache-Control": [
+            "max-age=0, private, must-revalidate"
+          ],
+          "Etag": [
+            "W/\"d2078664e3df2178f7fc69fb1afe8e14\""
+          ],
+          "Vary": [
+            "Accept-Encoding"
+          ],
+          "Referrer-Policy": [
+            "strict-origin-when-cross-origin"
+          ],
+          "Rndr-Id": [
+            "befe2481-8f3e-47d1"
+          ],
+          "X-Content-Type-Options": [
+            "nosniff"
+          ],
+          "X-Download-Options": [
+            "noopen"
+          ],
+          "X-Frame-Options": [
+            "SAMEORIGIN"
+          ],
+          "X-Permitted-Cross-Domain-Policies": [
+            "none"
+          ],
+          "X-Render-Origin-Server": [
+            "Render"
+          ],
+          "X-Request-Id": [
+            "641931d8-62e7-41e2-aa78-52ab32371fa0"
+          ],
+          "X-Runtime": [
+            "0.573919"
+          ],
+          "X-Xss-Protection": [
+            "0"
           ],
           "Server": [
-            "heroku-router"
+            "cloudflare"
+          ],
+          "Alt-Svc": [
+            "h3=\":443\"; ma=86400"
           ]
         },
         "body": {
-          "encoding": "UTF-8",
-          "string": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <meta charset=\"utf-8\">\n    <title>Heroku | Application Error</title>\n    <style media=\"screen\">\n      html,body,iframe {\n        margin: 0;\n        padding: 0;\n      }\n      html,body {\n        height: 100%;\n        overflow: hidden;\n      }\n      iframe {\n        width: 100%;\n        height: 100%;\n        border: 0;\n      }\n    </style>\n  </head>\n  <body>\n    <iframe src=\"//www.herokucdn.com/error-pages/no-such-app.html\"></iframe>\n  </body>\n</html>\n"
+          "encoding": "ASCII-8BIT",
+          "string": "{\"data\":[{\"id\":\"211portlan-180306\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"urgent care\",\"provider_name\":\"LEGACY MEDICAL CENTER\",\"street\":\"19300 Sw 65th Avenue\",\"city\":\"Tualatin\",\"state\":\"OR\",\"lat\":\"45.379113\",\"lon\":\"-122.740348\",\"description\":\"Legacy Medical Centers offer comprehensive hospital services including medical, surgical, diagnostic and emergency room services.\"}},{\"id\":\"211portlan-31583\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"urgent care\",\"provider_name\":\"LEGACY MEDICAL CENTER\",\"street\":\"2801 N Gantenbein Avenue\",\"city\":\"Portland\",\"state\":\"OR\",\"lat\":\"45.544068\",\"lon\":\"-122.670093\",\"description\":\"Legacy Medical Centers offer comprehensive hospital services including medical, surgical, diagnostic and emergency room services.\"}},{\"id\":\"211portlan-180304\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"urgent care\",\"provider_name\":\"LEGACY MEDICAL CENTER\",\"street\":\"1015 Nw 22nd Avenue\",\"city\":\"Portland\",\"state\":\"OR\",\"lat\":\"45.530233\",\"lon\":\"-122.697610\",\"description\":\"Legacy Medical Centers offer comprehensive hospital services including medical, surgical, diagnostic and emergency room services.\"}},{\"id\":\"211portlan-160764\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"urgent care\",\"provider_name\":\"OHSU IMMEDIATE CARE CLINIC\",\"street\":\"4212 Se Division Street\",\"city\":\"Portland\",\"state\":\"OR\",\"lat\":\"45.504998\",\"lon\":\"-122.618347\",\"description\":\"Provides general medical care for acute and chronic conditions. Unable to prescribe narcotic pain medication.\"}},{\"id\":\"211portlan-192204\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"urgent care\",\"provider_name\":\"BRAVE CARE\",\"street\":\"7215 Se Milwaukie Avenue\",\"city\":\"Portland\",\"state\":\"OR\",\"lat\":\"45.472068\",\"lon\":\"-122.648848\",\"description\":\"Offers primary and urgent care services for pediatric patients.\"}},{\"id\":\"211portlan-192205\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"urgent care\",\"provider_name\":\"BRAVE CARE\",\"street\":\"6924 Ne Sandy Boulevard\",\"city\":\"Portland\",\"state\":\"OR\",\"lat\":\"45.547163\",\"lon\":\"-122.591584\",\"description\":\"Offers primary and urgent care services for pediatric patients.\"}},{\"id\":\"211seattle-26870-13409\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"urgent care\",\"provider_name\":\"EMERGENCY AND URGENT CARE SERVICES OFFERED AT DOVELEWIS VETERINARY EMERGENCY \\u0026 SPECIALTY HOSPITAL\",\"street\":\"1945 Northwest Pettygrove Street\",\"city\":\"Portland\",\"state\":\"OR\",\"lat\":\"45.533022\",\"lon\":\"-122.691273\",\"description\":\"Provides emergency, critical, and urgent care services for animals.\"}},{\"id\":\"211portlan-195274\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"urgent care\",\"provider_name\":\"EMERGENCY AND URGENT CARE SERVICES\",\"street\":\"1945 Nw Pettygrove Street\",\"city\":\"Portland\",\"state\":\"OR\",\"lat\":\"45.533106\",\"lon\":\"-122.691402\",\"description\":\"Provides emergency, critical, and urgent care services for animals.\"}},{\"id\":\"211portlan-154831\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"urgent care\",\"provider_name\":\"URGENT WALK-IN CLINIC\",\"street\":\"4212 Se Division Street\",\"city\":\"Portland\",\"state\":\"OR\",\"lat\":\"45.504998\",\"lon\":\"-122.618346\",\"description\":\"Provides care to those experiencing a behavioral health crisis. Services are based on clinical need and may include counseling, prescribing medications, and referrals to affordable mental health, medical, and substance treatment and other community resources.\"}},{\"id\":\"211portlan-45653\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"urgent care\",\"provider_name\":\"OLD TOWN CLINIC\",\"street\":\"727 W Burnside Street\",\"city\":\"Portland\",\"state\":\"OR\",\"lat\":\"45.522857\",\"lon\":\"-122.678015\",\"description\":\"Old Town Clinic offers a patient-centered primary care. Services include: care for acute and chronic illnesses, women's health services, such as PAPS, pelvic exams, and breast exams, behavioral healthcare evaluation, substance abuse assessment, naturopathic and acupuncture services. Also offers a variety of wellness programs and activities available to patients, such as yoga. Urgent care for established patients. \\r\\n\\r\\nThe pharmacy provides medication education and therapy management, as well as anticoagulation therapy management to current clients.\"}}]}"
         }
       },
-      "recorded_at": "Fri, 29 Sep 2023 16:19:49 GMT"
+      "recorded_at": "Tue, 19 Dec 2023 17:12:13 GMT"
     },
     {
       "request": {
         "method": "get",
-        "uri": "http://localhost:3000/api/v0/search?keyword=urgent%20care&location=",
+        "uri": "https://next-steps-xu92.onrender.com/api/v0/search?keyword=food&location=",
         "body": {
           "encoding": "US-ASCII",
           "string": ""
@@ -75,11 +123,38 @@
           "message": "OK"
         },
         "headers": {
-          "X-Frame-Options": [
-            "SAMEORIGIN"
+          "Date": [
+            "Tue, 19 Dec 2023 17:12:14 GMT"
           ],
-          "X-Xss-Protection": [
-            "0"
+          "Content-Type": [
+            "application/json; charset=utf-8"
+          ],
+          "Transfer-Encoding": [
+            "chunked"
+          ],
+          "Connection": [
+            "keep-alive"
+          ],
+          "Cf-Ray": [
+            "838144efebbd798b-DEN"
+          ],
+          "Cf-Cache-Status": [
+            "DYNAMIC"
+          ],
+          "Cache-Control": [
+            "max-age=0, private, must-revalidate"
+          ],
+          "Etag": [
+            "W/\"1883574f7caf70aee9d8a71ef70b6309\""
+          ],
+          "Vary": [
+            "Accept-Encoding"
+          ],
+          "Referrer-Policy": [
+            "strict-origin-when-cross-origin"
+          ],
+          "Rndr-Id": [
+            "7a3f3c43-cedf-42e4"
           ],
           "X-Content-Type-Options": [
             "nosniff"
@@ -87,119 +162,37 @@
           "X-Download-Options": [
             "noopen"
           ],
+          "X-Frame-Options": [
+            "SAMEORIGIN"
+          ],
           "X-Permitted-Cross-Domain-Policies": [
             "none"
           ],
-          "Referrer-Policy": [
-            "strict-origin-when-cross-origin"
-          ],
-          "Content-Type": [
-            "application/json; charset=utf-8"
-          ],
-          "Vary": [
-            "Accept"
-          ],
-          "Etag": [
-            "W/\"22f7b95c74311fd5d2bb09db930309c2\""
-          ],
-          "Cache-Control": [
-            "max-age=0, private, must-revalidate"
+          "X-Render-Origin-Server": [
+            "Render"
           ],
           "X-Request-Id": [
-            "76134dc7-3375-4ba7-bf3f-063423c110c6"
+            "a434500f-5bc6-43f3-8885-d3b92a48aa34"
           ],
           "X-Runtime": [
-            "0.555704"
-          ],
-          "Server-Timing": [
-            "start_processing.action_controller;dur=0.23, process_action.action_controller;dur=544.90"
-          ],
-          "Transfer-Encoding": [
-            "chunked"
-          ]
-        },
-        "body": {
-          "encoding": "UTF-8",
-          "string": "{\"data\":[{\"id\":\"211colorad-a0h4T000002u03bQAA\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"urgent care\",\"provider_name\":\"MEDICAL CARE\",\"street\":\"1011 39th Ave\",\"city\":\"Greeley\",\"state\":\"CO\",\"lat\":\"40.420894\",\"lon\":\"-104.745033\",\"description\":\"Assists with:Common illnessesMinor injuriesPhysicalsPediatricsX-raysLab servicesImmunizations\"}},{\"id\":\"211colorad-a0h4T000002u7F5QAI\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"urgent care\",\"provider_name\":\"MEDICAL CARE\",\"street\":\"2144 N Main St\",\"city\":\"Longmont\",\"state\":\"CO\",\"lat\":\"40.197328\",\"lon\":\"-105.101054\",\"description\":\"Assists with:Common illnessesMinor injuriesPhysicalsPediatricsX-raysLab servicesImmunizations\"}},{\"id\":\"211colorad-a0h4T000002u15LQAQ\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"urgent care\",\"provider_name\":\"URGENT CARE CLINIC\",\"street\":\"5881 W 16th St\",\"city\":\"Greeley\",\"state\":\"CO\",\"lat\":\"40.414000\",\"lon\":\"-104.774390\",\"description\":\"Provides medical services including:Laboratory servicesPediatric serviceUrgent care\"}},{\"id\":\"211tulsa-67499\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"urgent care\",\"provider_name\":\"URGENT CARE LOCATOR TOOL\",\"street\":null,\"city\":null,\"state\":null,\"lat\":\"42.468091\",\"lon\":\"-49.232930\",\"description\":\"Online locator tool for urgent care locations. Includes a filter to search for pediatric urgent care.\"}},{\"id\":\"211colorad-a0h4T000003fVncQAE\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"urgent care\",\"provider_name\":\"MEDICAL CARE\",\"street\":\"4590 W 121st Ave\",\"city\":\"Broomfield\",\"state\":\"CO\",\"lat\":\"39.914928\",\"lon\":\"-105.045780\",\"description\":\"Assists with:Common illnessesMinor injuriesPhysicalsPediatricsX-raysLab servicesImmunizations\"}},{\"id\":\"211colorad-a0h4T000003fVnbQAE\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"urgent care\",\"provider_name\":\"MEDICAL CARE\",\"street\":\"9720 Grant St\",\"city\":\"Thornton\",\"state\":\"CO\",\"lat\":\"39.867370\",\"lon\":\"-104.983520\",\"description\":\"Assists with:Common illnessesMinor injuriesPhysicalsPediatricsX-raysLab servicesImmunizations\"}},{\"id\":\"211colorad-a0h4T000003fVnWQAU\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"urgent care\",\"provider_name\":\"MEDICAL CARE\",\"street\":\"17121 S Golden St Rd\",\"city\":\"Golden\",\"state\":\"CO\",\"lat\":\"39.733820\",\"lon\":\"-105.175970\",\"description\":\"Assists with:Common illnessesMinor injuriesPhysicalsPediatricsX-raysLab servicesImmunizations\"}},{\"id\":\"211colorad-a0h4T000003fVngQAE\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"urgent care\",\"provider_name\":\"MEDICAL CARE\",\"street\":\"7380 W 52nd Ave\",\"city\":\"Arvada\",\"state\":\"CO\",\"lat\":\"39.788840\",\"lon\":\"-105.078550\",\"description\":\"Assists with:Common illnessesMinor injuriesPhysicalsPediatricsX-raysLab servicesImmunizations\"}},{\"id\":\"211colorad-a0h4T000003fVnXQAU\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"urgent care\",\"provider_name\":\"MEDICAL CARE\",\"street\":\"18890 E Hampden Ave\",\"city\":\"Aurora\",\"state\":\"CO\",\"lat\":\"39.652141\",\"lon\":\"-104.768338\",\"description\":\"Assists with:Common illnessesMinor injuriesPhysicalsPediatricsX-raysLab servicesImmunizations\"}},{\"id\":\"211colorad-a0h4T0000017LiLQAU\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"urgent care\",\"provider_name\":\"MEDICAL CARE\",\"street\":\"7595 W Colfax Ave\",\"city\":\"Lakewood\",\"state\":\"CO\",\"lat\":\"39.740390\",\"lon\":\"-105.080920\",\"description\":\"Assists with:Common illnessesMinor injuriesPhysicalsPediatricsX-raysLab servicesImmunizations\"}}]}"
-        }
-      },
-      "recorded_at": "Fri, 29 Sep 2023 16:39:52 GMT"
-    },
-    {
-      "request": {
-        "method": "get",
-        "uri": "http://localhost:3000/api/v0/search?keyword=food&location=",
-        "body": {
-          "encoding": "US-ASCII",
-          "string": ""
-        },
-        "headers": {
-          "User-Agent": [
-            "Faraday v2.7.11"
-          ],
-          "Accept-Encoding": [
-            "gzip;q=1.0,deflate;q=0.6,identity;q=0.3"
-          ],
-          "Accept": [
-            "*/*"
-          ]
-        }
-      },
-      "response": {
-        "status": {
-          "code": 200,
-          "message": "OK"
-        },
-        "headers": {
-          "X-Frame-Options": [
-            "SAMEORIGIN"
+            "0.450998"
           ],
           "X-Xss-Protection": [
             "0"
           ],
-          "X-Content-Type-Options": [
-            "nosniff"
+          "Server": [
+            "cloudflare"
           ],
-          "X-Download-Options": [
-            "noopen"
-          ],
-          "X-Permitted-Cross-Domain-Policies": [
-            "none"
-          ],
-          "Referrer-Policy": [
-            "strict-origin-when-cross-origin"
-          ],
-          "Content-Type": [
-            "application/json; charset=utf-8"
-          ],
-          "Vary": [
-            "Accept"
-          ],
-          "Etag": [
-            "W/\"0101511d947120ea6d833ff1a60f203a\""
-          ],
-          "Cache-Control": [
-            "max-age=0, private, must-revalidate"
-          ],
-          "X-Request-Id": [
-            "ed4f768f-3624-4038-b414-eb63dcba7ac1"
-          ],
-          "X-Runtime": [
-            "0.555885"
-          ],
-          "Server-Timing": [
-            "start_processing.action_controller;dur=0.23, process_action.action_controller;dur=544.40"
-          ],
-          "Transfer-Encoding": [
-            "chunked"
+          "Alt-Svc": [
+            "h3=\":443\"; ma=86400"
           ]
         },
         "body": {
-          "encoding": "UTF-8",
-          "string": "{\"data\":[{\"id\":\"211colorad-a0h4T000002u09aQAA\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"food\",\"provider_name\":\"COMMODITIES AND FOOD ASSISTANCE\",\"street\":\"2600 N Lincoln Ave\",\"city\":\"Loveland\",\"state\":\"CO\",\"lat\":\"40.419806\",\"lon\":\"-105.071586\",\"description\":\"Provides a client choice food pantry for individuals in need. Also distributes the Commodities Supplemental Food Program (CSFP) to eligible seniors and The Emergency Food Assistance Program (TFAP).\"}},{\"id\":\"211colorad-a0h4T000003f9cGQAQ\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"food\",\"provider_name\":\"MOBILE FOOD PANTRY\",\"street\":\"4800 Hill N Park Dr\",\"city\":\"Greeley\",\"state\":\"CO\",\"lat\":\"40.363907\",\"lon\":\"-104.746838\",\"description\":\"Offers mobile food pantries at locations throughout Weld County.\"}},{\"id\":\"211colorad-a0h4T000003f9caQAA\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"food\",\"provider_name\":\"MOBILE FOOD PANTRY\",\"street\":\"501 Palmer Ave\",\"city\":\"Mead\",\"state\":\"CO\",\"lat\":\"40.237569\",\"lon\":\"-105.001568\",\"description\":\"Offers mobile food pantries at locations throughout Weld County.\"}},{\"id\":\"211colorad-a0h4T000003f9cfQAA\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"food\",\"provider_name\":\"MOBILE FOOD PANTRY\",\"street\":\"320 Centennial Dr\",\"city\":\"Milliken\",\"state\":\"CO\",\"lat\":\"40.326460\",\"lon\":\"-104.832490\",\"description\":\"Offers mobile food pantries at locations throughout Weld County.\"}},{\"id\":\"211colorad-a0h4T000003fbrJQAQ\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"food\",\"provider_name\":\"MOBILE FOOD PANTRY\",\"street\":\"686 Co Rd 42\",\"city\":\"Walden\",\"state\":\"CO\",\"lat\":\"40.292000\",\"lon\":\"-105.004000\",\"description\":\"Provides food to communities by sending semi-trucks to set locations and distributing food for 1 -2 hours.\"}},{\"id\":\"211colorad-a0h4T000003f9c6QAA\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"food\",\"provider_name\":\"MOBILE FOOD PANTRY\",\"street\":\"14827 Wcr 42\",\"city\":\"Gilcrest\",\"state\":\"CO\",\"lat\":\"40.290497\",\"lon\":\"-104.776270\",\"description\":\"Offers mobile food pantries at locations throughout Weld County.\"}},{\"id\":\"211colorad-a0h4T000003fYGQQA2\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"food\",\"provider_name\":\"MOBILE FOOD PANTRY\",\"street\":\"375 Meadowlark Dr\",\"city\":\"Berthoud\",\"state\":\"CO\",\"lat\":\"40.303870\",\"lon\":\"-105.102790\",\"description\":\"Offers a drive-through mobile food pantry for those in need.\"}},{\"id\":\"211colorad-a0h4T000003fa6MQAQ\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"food\",\"provider_name\":\"COMMODITY SUPPLEMENTAL FOOD PROGRAM AND TEFAP\",\"street\":\"686 Co Rd 42\",\"city\":\"Walden\",\"state\":\"CO\",\"lat\":\"40.292000\",\"lon\":\"-105.004000\",\"description\":\"Provides a monthly box of shelf-stable groceries, plus a block of refrigerated cheese, to individuals aged 60 or older who meet income qualifications. \\r\\nFood boxes are available to pick up every 3rd Saturday from 9 a.m. - 12 p.m. - 10700 E 45th Ave, Denver, CO\"}},{\"id\":\"211colorad-a0h4T000003fa68QAA\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"food\",\"provider_name\":\"THE EMERGENCY FOOD ASSISTANCE PROGRAM\",\"street\":\"686 Co Rd 42\",\"city\":\"Walden\",\"state\":\"CO\",\"lat\":\"40.292000\",\"lon\":\"-105.004000\",\"description\":\"Provides supplemental foods to individuals who meet the income qualifications or participate in other public assistance programs including:Shelf-stable groceriesMeatProduceFood assortments may vary.\"}},{\"id\":\"211colorad-a0h4T000002u0dyQAA\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"food\",\"provider_name\":\"FOOD PANTRY \\u0026 EMERGENCY ITEMS\",\"street\":\"4754 W 31st St\",\"city\":\"Greeley\",\"state\":\"CO\",\"lat\":\"40.385963\",\"lon\":\"-104.757898\",\"description\":\"Provides a food pantry and the following emergency items to those in need:Emergency food boxesBaby foodBaby diapersHygiene items\"}}]}"
+          "encoding": "ASCII-8BIT",
+          "string": "{\"data\":[{\"id\":\"211portlan-39602\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"food\",\"provider_name\":\"C3 FOOD PANTRY\",\"street\":\"6120 Ne 57th Avenue\",\"city\":\"Portland\",\"state\":\"OR\",\"lat\":\"45.567296\",\"lon\":\"-122.604147\",\"description\":\"Provides a drive through and pickup of pre-packed food boxes with 3-4 days of food that include fresh fruits, vegetables, meat, dairy, and dry goods depending on donations received. Unlimited visits per month. No home delivery available.\"}},{\"id\":\"211portlan-194893\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"food\",\"provider_name\":\"ST CHARLES SVDP FOOD PANTRY\",\"street\":\"5310 Ne 42nd Avenue\",\"city\":\"Portland\",\"state\":\"OR\",\"lat\":\"45.561757\",\"lon\":\"-122.619801\",\"description\":\"Provides a shopping-style food pantry. Also delivers food boxes to people who are homebound.\"}},{\"id\":\"211portlan-37485\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"food\",\"provider_name\":\"FOOD SHARE\",\"street\":\"8100 N Lombard Street\",\"city\":\"Portland\",\"state\":\"OR\",\"lat\":\"45.589251\",\"lon\":\"-122.749414\",\"description\":\"Volunteer-run food sharing community that distributes fruit, vegetables, bread, dairy, and other food items as available.\"}},{\"id\":\"211seattle-26192-12582\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"food\",\"provider_name\":\"FOOD SHARING COMMUNITY OFFERED AT ST JOHNS FOOD SHARE\",\"street\":\"8100 North Lombard Street\",\"city\":\"Portland\",\"state\":\"OR\",\"lat\":\"45.589209\",\"lon\":\"-122.749308\",\"description\":\"Volunteer-run food sharing community that distributes fruit, vegetables, bread, dairy, and other food items as available.\"}},{\"id\":\"211portlan-110655\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"food\",\"provider_name\":\"FOOD PANTRY\",\"street\":\"7600 Ne Glisan Street\",\"city\":\"Portland\",\"state\":\"OR\",\"lat\":\"45.526182\",\"lon\":\"-122.584317\",\"description\":\"Provides food boxes to those in need in addition to a weekly community breakfast.\"}},{\"id\":\"211portlan-185075\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"food\",\"provider_name\":\"FOOD PANTRY\",\"street\":\"624 Sw Halsey Street\",\"city\":\"Troutdale\",\"state\":\"OR\",\"lat\":\"45.538528\",\"lon\":\"-122.393868\",\"description\":\"Provides 2-3 days' worth of emergency food.\"}},{\"id\":\"211portlan-130264\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"food\",\"provider_name\":\"FOOD ASSISTANCE\",\"street\":\"3445 Sw Moss Street\",\"city\":\"Portland\",\"state\":\"OR\",\"lat\":\"45.467693\",\"lon\":\"-122.712460\",\"description\":\"Provides a food box containing 3-5 days worth of food delivered via a no-contact system. Households may request this resource up to two times per mouth. Food boxes contain mostly non-perishable items. Food boxes for special diets include elder-friendly, low-sodium, low-fat, and easy-to-prepare options. Bread is available outside the pantry when pantry is open. Accepts food and monetary donations.\"}},{\"id\":\"211portlan-185573\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"food\",\"provider_name\":\"FOOD PANTRY\",\"street\":\"5209 Ne 22nd Avenue\",\"city\":\"Portland\",\"state\":\"OR\",\"lat\":\"45.560662\",\"lon\":\"-122.643178\",\"description\":\"Provides food boxes to families in need.\"}},{\"id\":\"211portlan-16433\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"food\",\"provider_name\":\"NORTHEAST EMERGENCY FOOD PROGRAM\",\"street\":\"4800 Ne 72nd Avenue\",\"city\":\"Portland\",\"state\":\"OR\",\"lat\":\"45.558040\",\"lon\":\"-122.588471\",\"description\":\"Grocery-style pantry providing a 3-5-day supply of nutritious groceries, including meat and dairy items, that families and individuals may receive 1 time per week. A clothing closet is also provided. No delivery service available.\"}},{\"id\":\"211portlan-141479\",\"type\":\"filtered_provider\",\"attributes\":{\"category\":\"food\",\"provider_name\":\"PEOPLE'S PANTRY SHOPPING STYLE EMERGENCY FOOD PANTRY\",\"street\":\"4115 N Mississippi\",\"city\":\"Portland\",\"state\":\"OR\",\"lat\":\"45.553587\",\"lon\":\"-122.675846\",\"description\":\"Emergency food program providing a shopping style food pantry where volunteers assist those in need in shopping for foods staples. Focus is the BIPOC and LGBTQ2SIA+ community. However, everyone in need of food will be served.\"}}]}"
         }
       },
-      "recorded_at": "Fri, 29 Sep 2023 16:39:52 GMT"
+      "recorded_at": "Tue, 19 Dec 2023 17:12:14 GMT"
     }
   ],
   "recorded_with": "VCR 6.2.0"

@@ -14,7 +14,7 @@ RSpec.describe "Providers Show page", :vcr do
         expect(page).to have_content("(888) 381-4858")
         expect(page).to have_content("Medical Care Fees, call for current fees.")
         expect(page).to have_content("Monday - Friday, 8 a.m. - 8 p.m.; Saturday, Sunday, 9 a.m. - 4 p.m.")
-        expect(page).to have_content("39.914928 | -105.045780")
+        expect(page).to have_content("39.914985 | -105.045970")
       end
     end
   end
