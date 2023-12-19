@@ -6,8 +6,6 @@
   <div id="create-user-form">
     <%= form_with(model: @user, url: users_path, method: :post, local: true) do |form| %>
     
-      <%= form.label :role, "Select Account Type" %> <%= form.select :role, User.roles.keys[0..1], {}, style: 'width: 20%;', id: 'user-role' %><br />
-      
       <div id="agent-description" style="display: none">
         <%= form.label :description, "Tell us why you want to be an agent: " %>
         <%= form.text_field :description, placeholder: "Your description here" %><br />
