@@ -11,7 +11,7 @@
   <b>Geolocation:</b> <%= @provider.lat %> | <%= @provider.lon %>
 </p>
 <br />
-<%= form_with(model: @favorite, url: user_favorites_path(current_user), method: :post) do |form| %>
+<%= form_with(model: @favorite, url: user_favorites_path(current_user), method: :post) do |form| %>   
     <%= form.hidden_field :category, value: @provider.category %>
     <%= form.hidden_field :name, value: @provider.provider_name %>
     <%= form.hidden_field :description, value: @provider.description.html_safe %>
