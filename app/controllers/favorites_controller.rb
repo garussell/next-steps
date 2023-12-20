@@ -27,7 +27,7 @@ class FavoritesController < ApplicationController
   private
 
   def favorite_params
-    params.require(:favorite).permit(:category, :name, :description, :address, :website, :phone, :fees, :schedule)
+    params.permit(:category, :name, :description, :address, :website, :phone, :fees, :schedule)
   end
 
   def duplicate?
