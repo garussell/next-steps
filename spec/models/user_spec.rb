@@ -51,6 +51,7 @@ RSpec.describe User, type: :model do
                     }}
 
       expect { User.from_omniauth(response) }.to change { User.count }.by(1)
+      expect(User.last.role).to eq("agent")
     end
   end
 end
