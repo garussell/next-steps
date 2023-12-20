@@ -4,6 +4,12 @@ RSpec.describe "Providers Show page", :vcr do
   describe "As a visitor" do
     describe "When I visit the providers show page" do
       it "I see that provider's address and website are links.  I also see all of the providers information, including phone number" do
+        user = User.create!(username: "my_username", password: "my_password")
+        visit users_login_path
+        fill_in "Username", with: user.username
+        fill_in "Password", with: user.password
+        click_button "Login"
+        
         id = "211colorad-a0h4T000003fVncQAE"
         visit provider_path(id)
 

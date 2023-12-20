@@ -38,8 +38,8 @@ RSpec.describe TwoOneOneService, :vcr do
   end
 
   describe "get_provider_details(service_id)" do
-    xit "returns the detailed provider information based off of id" do
-      provider_id = "211contrac-1562"
+    it "returns the detailed provider information based off of id" do
+      provider_id = "211colorad-a0h4T000002u0RpQAI"
       service = TwoOneOneService.new
       json = service.get_provider_details(provider_id)
 
@@ -60,7 +60,7 @@ RSpec.describe TwoOneOneService, :vcr do
       expect(provider).to have_key(:services)
       expect(provider[:services]).to be_an(Array)
       expect(provider[:services].first).to have_key(:fees)
-      expect(provider[:services].first[:fees]).to be_a(String)
+      expect(provider[:services].first[:fees]).to eq(nil)
 
       expect(provider).to have_key(:locations)
       expect(provider[:locations]).to be_a(Array)

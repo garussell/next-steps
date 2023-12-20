@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe ProvidersFacade, :vcr do
   describe '#provider_details' do
     it 'returns a provider object for a specific service location' do
-      provider_id = '211contrac-1561'
+      provider_id = '211colorad-a0h4T000002u0RpQAI'
       facade = ProvidersFacade.new(provider_id)
       provider = facade.provider_details
 

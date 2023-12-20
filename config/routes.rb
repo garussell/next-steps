@@ -32,7 +32,9 @@ Rails.application.routes.draw do
   post "/users/login", to: "sessions#new"
   get "/logout", to: "sessions#logout", as: "users_logout"
 
-  resources :users, only: [:index, :show, :new, :create, :edit, :update, :destroy]
+  resources :users, only: [:index, :show, :new, :create, :edit, :update, :destroy] do
+    resources :favorites, only: [:index, :create, :destroy]
+  end
 
   # BE Routes
   namespace :api do

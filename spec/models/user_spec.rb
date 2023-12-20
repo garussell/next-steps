@@ -1,6 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
+  describe 'relationships' do
+    it { should have_many :favorites }
+  end
   
   describe "validations" do
     it { should validate_presence_of :username }
@@ -51,6 +54,7 @@ RSpec.describe User, type: :model do
                     }}
 
       expect { User.from_omniauth(response) }.to change { User.count }.by(1)
+      expect(User.last.role).to eq("agent")
     end
   end
 end

@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  has_many :favorites, dependent: :destroy
+
   validates_presence_of :username
   validates_uniqueness_of :username
   validates_presence_of :password, on: :create
@@ -12,7 +14,7 @@ class User < ApplicationRecord
     user = User.find_or_create_by(uid: response["uid"], provider: response["provider"]) do |u|
       u.username = response["info"]["email"]
       u.password = SecureRandom.hex(15)
+      u.role = "agent"
     end
   end
-  
 end

@@ -9,8 +9,23 @@
 <% if !@providers.present? %>
   <% if current_agent? && approved? %>
     <p><%= link_to 'Add My Service', new_register_provider_path %></p>
-  <% elsif current_user && !current_agent? %>
+  <% elsif current_user && @favorites.count > 0 %>
     <h3>My Favorite Providers</h3>
+     <% @favorites.each do |favorite| %>
+     <div class="card mb-4" style=>
+      <p><strong>Category:</strong><%= favorite.category %></p>
+      <p><strong>Name:</strong><%= favorite.name %></p>
+      <p><strong>Description:</strong><%= favorite.description %></p>
+      <p><strong>Address:</strong><%= favorite.address %></p>
+      <p><strong>Website:</strong><%= link_to "#{favorite.website}" %>
+      <p><strong>Phone:</strong><%= favorite.phone %></p>
+      <p><strong>Fees:</strong><%= favorite.fees %></p>
+      <p><strong>Schedule:</strong><%= favorite.schedule %></p>
+      <%= form_for favorite, url: user_favorite_path(current_user, favorite), method: :delete, html: { class: 'delete-form' } do |f| %>
+        <%= f.button "Remove", class: 'delete-button' %>
+      <% end %>
+    </div>
+    <% end %>
   <% end %>
 <% else %>
   <% if current_agent? && approved? %>
@@ -46,10 +61,7 @@
           </tr>
         <% end %>
       </tbody>
-  <% elsif current_user && !current_agent? %>
-    <h3>My Favorite Providers</h3>
   <% end %>
-
 <% end %>
 
 
