@@ -13,14 +13,14 @@
     <h3>My Favorite Providers</h3>
      <% @favorites.each do |favorite| %>
      <div class="card mb-4" style=>
-      <p><strong>Category:</strong><%= favorite.category %></p>
-      <p><strong>Name:</strong><%= favorite.name %></p>
-      <p><strong>Description:</strong><%= favorite.description %></p>
-      <p><strong>Address:</strong><%= favorite.address %></p>
-      <p><strong>Website:</strong><%= link_to "#{favorite.website}" %>
-      <p><strong>Phone:</strong><%= favorite.phone %></p>
-      <p><strong>Fees:</strong><%= favorite.fees %></p>
-      <p><strong>Schedule:</strong><%= favorite.schedule %></p>
+      <p><strong>Category: </strong><%= favorite.category %></p>
+      <p><strong>Name: </strong><%= favorite.name %></p>
+      <p><strong>Description: </strong><%= strip_tags(favorite.description) %></p>
+      <p><strong>Address: </strong><%= favorite.address %></p>
+      <p><strong>Website: </strong><%= link_to "#{favorite.website}" %>
+      <p><strong>Phone: </strong><%= favorite.phone %></p>
+      <p><strong>Fees: </strong><%= strip_tags(favorite.fees) %></p>
+      <p><strong>Schedule: </strong><%= favorite.schedule %></p>
       <%= form_for favorite, url: user_favorite_path(current_user, favorite), method: :delete, html: { class: 'delete-form' } do |f| %>
         <%= f.button "Remove", class: 'delete-button' %>
       <% end %>

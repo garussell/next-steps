@@ -27,11 +27,11 @@ class FavoritesController < ApplicationController
   private
 
   def favorite_params
-    params.require(:favorite).permit(:category, :name, :description, :address, :website, :phone, :fees, :schedule)
+    params&.require(:favorite).permit(:category, :name, :description, :address, :website, :phone, :fees, :schedule)
   end
 
   def duplicate?
-    @user.favorites.exists?(name: params[:favorite][:name]) || @user.favorites.exists?(address: params[:favorite][:address])
+    @user.favorites.exists?(address: params[:favorite][:address])
   end
   
 end
