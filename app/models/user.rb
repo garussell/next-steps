@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  has_many :favorites, dependent: :destroy
+
   validates_presence_of :username
   validates_uniqueness_of :username
   validates_presence_of :password, on: :create

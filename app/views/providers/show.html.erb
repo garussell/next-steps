@@ -10,3 +10,17 @@
   <b>Schedule:</b> <%= @provider.schedule %><br />
   <b>Geolocation:</b> <%= @provider.lat %> | <%= @provider.lon %>
 </p>
+<br />
+<%= form_with(model: @favorite, url: user_favorites_path(current_user), method: :post) do |form| %>
+    <%= form.hidden_field :category, value: @provider.category %>
+    <%= form.hidden_field :name, value: @provider.provider_name %>
+    <%= form.hidden_field :description, value: @provider.description.html_safe %>
+    <%= form.hidden_field :address, value: "#{@provider.provider_name}, #{@provider.street}, #{@provider.city}, #{@provider.state}, #{@provider.zip}" %>
+    <%= form.hidden_field :website, value: "#{@provider.website}" %>
+    <%= form.hidden_field :phone, value: @provider.phone %>
+    <%= form.hidden_field :fees, value: @provider.fees %>
+    <%= form.hidden_field :schedule, value: @provider.schedule %>
+  <div>
+    <%= form.submit "Add to Favorites" %>
+  </div>
+<% end %>
