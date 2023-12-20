@@ -49,3 +49,13 @@ agent2 = User.create!(
 )
 puts "agent2 created"
 
+favorite1 = agent2.favorites.create!(
+  category: "Housing",
+  name: "Frangelica's Group Home",
+  description: "I own a group home and accept vouchers",
+  address: "123 Main St, Denver, CO 80202",
+  website: "http://frangelica.com",
+  phone: "(888) 381-4858",
+  fees: "Call for current fees.",
+  schedule: "Monday - Friday, 8 a.m. - 8 p.m.; Saturday, Sunday, 9 a.m. - 4 p.m."
+)

@@ -9,7 +9,7 @@
 <% if !@providers.present? %>
   <% if current_agent? && approved? %>
     <p><%= link_to 'Add My Service', new_register_provider_path %></p>
-  <% elsif current_user && @favorites.count > 0 %>
+  <% elsif current_user %>
     <h3>My Favorite Providers</h3>
      <% @favorites.each do |favorite| %>
      <div class="card mb-4" style=>

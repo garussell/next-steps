@@ -1,20 +1,21 @@
 class FavoritesController < ApplicationController
 
   def create
-    @user = current_user
- 
-    @favorite = @user.favorites.create(favorite_params) 
+    @user = current_user || User.find(params[:user_id])
+    @favorite = @user.favorites.new(favorite_params)
+  
     if @favorite.save
       flash[:success] = "Provider added to favorites"
-      redirect_back(fallback_location: user_path(@user))
-    elsif duplicate? 
+    elsif duplicate?
       flash[:warning] = "Provider already added to favorites"
-      redirect_back(fallback_location: user_path(@user))
     else
       flash[:warning] = "Provider not added to favorites"
-      redirect_back(fallback_location: user_path(@user))
+      flash[:errors] = @favorite.errors.full_messages
     end
+  
+    redirect_back(fallback_location: user_path(@user))
   end
+  
 
   def destroy
     @user = current_user
@@ -27,7 +28,7 @@ class FavoritesController < ApplicationController
   private
 
   def favorite_params
-    params&.require(:favorite).permit(:category, :name, :description, :address, :website, :phone, :fees, :schedule)
+    params.require(:favorite)&.permit(:category, :name, :description, :address, :website, :phone, :fees, :schedule)
   end
 
   def duplicate?
