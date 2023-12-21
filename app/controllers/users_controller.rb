@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find_by(id: params[:id])
+    @user = current_user || User.find_by(id: params[:id])
     @favorites = @user.favorites if @user
     @providers = Provider.where(id: @user.provider_id.to_i) unless @user.nil?
     if @user.nil? || current_user != @user
@@ -62,7 +62,7 @@ class UsersController < ApplicationController
   
   def generate_pdf
     @user = current_user || User.find(params[:id])
-    @favorites = @user.favorites
+    @favorites = @user.favorites if @user
 
     pdf_filename = "#{@user.username}-Dashboard.pdf"
     pdf_file = Rails.root.join('tmp', pdf_filename)
