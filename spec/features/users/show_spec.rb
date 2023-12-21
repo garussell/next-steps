@@ -112,9 +112,9 @@ RSpec.describe 'User Dashboard page', :vcr do
   end
 
   it "displays 'My Favorite Providers' if the current user is a 'user' and not 'agent'" do
-    user = User.create!(username: "pal", password: "password", role: "user", status: "approved")
-    user.favorites.create!(category: "Medical Care", name: "NextCare Urgent Care", description: "Provides urgent care services", address: "4590 W 121st Ave, Broomfield, CO 80020", website: "http://nextcare.com", phone: "(888) 381-4858", fees: "Medical Care Fees, call for current fees.", schedule: "Monday - Friday, 8 a.m. - 8 p.m.; Saturday, Sunday, 9 a.m. - 4 p.m.")
-    
+    user = User.create!(username: "pal", password: "password", role: "agent", status: "approved")
+    favorite = user.favorites.create!(category: "Medical Care", name: "NextCare Urgent Care", description: "Provides urgent care services", address: "4590 W 121st Ave, Broomfield, CO 80020", website: "http://nextcare.com", phone: "(888) 381-4858", fees: "Medical Care Fees, call for current fees.", schedule: "Monday - Friday, 8 a.m. - 8 p.m.; Saturday, Sunday, 9 a.m. - 4 p.m.")
+   
     visit users_login_path
 
     fill_in "username", with: user.username
@@ -123,7 +123,6 @@ RSpec.describe 'User Dashboard page', :vcr do
 
     expect(page).to have_current_path(user_path(user))
     expect(page).to have_content("My Favorite Providers")
-
     expect(page).to have_content("Medical Care")
     expect(page).to have_content("NextCare Urgent Care")
     expect(page).to have_content("Provides urgent care services")
