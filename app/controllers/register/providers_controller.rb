@@ -13,7 +13,7 @@ class Register::ProvidersController < ApplicationController
         flash[:success] = "Provider successfully created"
         redirect_to user_path(user)
       end
-    else 
+    else
       flash[:warning] = "Invalid entries, please try again"
       redirect_to new_register_provider_path
     end
