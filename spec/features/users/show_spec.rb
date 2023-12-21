@@ -106,7 +106,7 @@ RSpec.describe 'User Dashboard page', :vcr do
     fill_in "username", with: user.username
     fill_in "password", with: user.password
     click_button "Login"
-    save_and_open_page
+
     expect(page).to have_current_path(user_path(user))
     expect(page).to have_content("Add Service")
   end
