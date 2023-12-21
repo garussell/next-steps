@@ -8,7 +8,11 @@
 <br/>
 
 <% if current_agent? %>
-  <h3>My Favorite Providers</h3>
+  <% if @favorites.empty? %>
+    <p><%= link_to 'Add Favorite Providers', root_path %></p>
+  <% else %>
+    <h3>My Favorite Providers</h3>
+  <% end %>
 
   <% @favorites.each do |favorite| %>
     <div class="card mb-4">
@@ -25,37 +29,40 @@
   <% end %>
 
   <% if approved? %>
-    <p><%= link_to 'Add My Service', new_register_provider_path %></p>
-    <h3>My Services</h3>
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Category</th>
-          <th>Fees</th>
-          <th>Location</th>
-          <th>Phone</th>
-          <th>Schedule</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @providers.each do |provider| %>
+    <% if @providers.empty? %>
+      <p><%= link_to 'Add My Service', new_register_provider_path %></p>      
+    <% else %>      
+      <h3>My Services</h3>
+      <table class="table table-striped">
+        <thead>
           <tr>
-            <td><%= provider.name %></td>
-            <td><%= provider.description %></td>
-            <td><%= provider.fees %></td>
-            <td><%= "#{provider.street} #{provider.city.upcase}, #{provider.state.upcase} #{provider.zipcode}" %></td>
-            <td><%= provider.phone %></td>
-            <td><%= provider.schedule %></td>
-            <td>
-              <%= link_to 'Edit', edit_register_provider_path(provider), class: 'edit-button' %>
-              <%= form_for provider, url: delete_provider_path(provider), method: :delete, html: { class: 'delete-form' } do |f| %>
-                <%= f.button "Delete", class: 'delete-button' %>
-              <% end %>
-            </td>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Fees</th>
+            <th>Location</th>
+            <th>Phone</th>
+            <th>Schedule</th>
           </tr>
-        <% end %>
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          <% @providers.each do |provider| %>
+            <tr>
+              <td><%= provider.name %></td>
+              <td><%= provider.description %></td>
+              <td><%= provider.fees %></td>
+              <td><%= "#{provider.street} #{provider.city.upcase}, #{provider.state.upcase} #{provider.zipcode}" %></td>
+              <td><%= provider.phone %></td>
+              <td><%= provider.schedule %></td>
+              <td>
+                <%= link_to 'Edit', edit_register_provider_path(provider), class: 'edit-button' %>
+                <%= form_for provider, url: delete_provider_path(provider), method: :delete, html: { class: 'delete-form' } do |f| %>
+                  <%= f.button "Delete", class: 'delete-button' %>
+                <% end %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>     
+    <% end %>     
   <% end %>
 <% end %>
