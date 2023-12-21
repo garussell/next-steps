@@ -60,6 +60,17 @@ class UsersController < ApplicationController
     redirect_to root_path
   end
   
+  def generate_pdf
+    @user = current_user || User.find(params[:id])
+    @favorites = @user.favorites
+
+    pdf_filename = "#{@user.username}-Dashboard.pdf"
+    pdf_file = Rails.root.join('tmp', pdf_filename)
+  
+    new_pdf = PdfGeneratorService.generate_pdf(@user, @favorites, pdf_file)
+    send_file(pdf_file, filename: pdf_filename, type: 'application/pdf', disposition: 'inline')
+  end
+  
   private
 
   def user_params
