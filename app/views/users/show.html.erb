@@ -1,34 +1,31 @@
 <h2>User Dashboard</h2>
-<p>Your Username:  <%= current_user.username %></p>
-<p>[ <%= link_to "Change password", edit_user_path(current_user) %> ]</p>
+<p>Your Username: <%= current_user.username %></p>
+<p>[<%= link_to "Change password", edit_user_path(current_user) %>]</p>
+
 <%= form_for current_user, url: user_path(current_user), method: :delete, html: { class: 'delete-form' } do |f| %>
   <%= f.button "Delete my account", class: 'delete-button' %>
 <% end %>
 <br/>
 
-<% if !@providers.present? %>
-  <% if current_agent? && approved? %>
-    <p><%= link_to 'Add My Service', new_register_provider_path %></p>
-  <% elsif current_user %>
-    <h3>My Favorite Providers</h3>
-     <% @favorites.each do |favorite| %>
-     <div class="card mb-4" style=>
+<% if current_agent? %>
+  <h3>My Favorite Providers</h3>
+
+  <% @favorites.each do |favorite| %>
+    <div class="card mb-4">
       <p><strong>Category: </strong><%= favorite.category %></p>
       <p><strong>Name: </strong><%= favorite.name %></p>
       <p><strong>Description: </strong><%= strip_tags(favorite.description) %></p>
       <p><strong>Address: </strong><%= favorite.address %></p>
-      <p><strong>Website: </strong><%= link_to "#{favorite.website}" %>
+      <p><strong>Website: </strong><%= link_to favorite.website %></p>
       <p><strong>Phone: </strong><%= favorite.phone %></p>
       <p><strong>Fees: </strong><%= strip_tags(favorite.fees) %></p>
       <p><strong>Schedule: </strong><%= favorite.schedule %></p>
-      <%= form_for favorite, url: user_favorite_path(current_user, favorite), method: :delete, html: { class: 'delete-form' } do |f| %>
-        <%= f.button "Remove", class: 'delete-button' %>
-      <% end %>
+      <%= button_to 'Remove', user_favorite_path(current_user, favorite), method: :delete, class: 'delete-form' %>
     </div>
-    <% end %>
   <% end %>
-<% else %>
-  <% if current_agent? && approved? %>
+
+  <% if approved? %>
+    <p><%= link_to 'Add My Service', new_register_provider_path %></p>
     <h3>My Services</h3>
     <table class="table table-striped">
       <thead>
@@ -51,20 +48,14 @@
             <td><%= provider.phone %></td>
             <td><%= provider.schedule %></td>
             <td>
-              
               <%= link_to 'Edit', edit_register_provider_path(provider), class: 'edit-button' %>
               <%= form_for provider, url: delete_provider_path(provider), method: :delete, html: { class: 'delete-form' } do |f| %>
                 <%= f.button "Delete", class: 'delete-button' %>
               <% end %>
-
             </td>
           </tr>
         <% end %>
       </tbody>
+    </table>
   <% end %>
 <% end %>
-
-
-  
-
-
