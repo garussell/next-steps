@@ -115,7 +115,7 @@ RSpec.describe 'User Dashboard page', :vcr do
     user = User.create!(username: "pal", password: "password", role: "agent", status: "approved")
     user.favorites.create!(category: "Medical Care", name: "NextCare Urgent Care", description: "Provides urgent care services", address: "4590 W 121st Ave, Broomfield, CO 80020", website: "http://nextcare.com", phone: "(888) 381-4858", fees: "Medical Care Fees, call for current fees.", schedule: "Monday - Friday, 8 a.m. - 8 p.m.; Saturday, Sunday, 9 a.m. - 4 p.m.")
     
-    favorite = user.favorites.create!(category: "Medical Care", name: "NextCare Urgent Care", description: "Provides urgent care services", address: "4590 W 121st Ave, Broomfield, CO 80020", website: "http://nextcare.com", phone: "(888) 381-4858", fees: "Medical Care Fees, call for current fees.", schedule: "Monday - Friday, 8 a.m. - 8 p.m.; Saturday, Sunday, 9 a.m. - 4 p.m.")
+    favorite = user.favorites.create!(category: "Medical Care", name: "NextCare Urgent Care", description: "Provides urgent care services", address: "123 Five St, Boudler, Co 80603", website: "http://nextcare.com", phone: "(888) 381-4858", fees: "Medical Care Fees, call for current fees.", schedule: "Monday - Friday, 8 a.m. - 8 p.m.; Saturday, Sunday, 9 a.m. - 4 p.m.")
    
     visit users_login_path
 
