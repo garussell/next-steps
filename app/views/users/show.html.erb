@@ -9,7 +9,7 @@
 <% end %>
 <br/>
 
-<% if current_agent? %>
+<% if current_user  %>
   <% if @favorites.empty? %>
     <p><%= link_to 'Add Favorite Providers', root_path %></p>
   <% else %>

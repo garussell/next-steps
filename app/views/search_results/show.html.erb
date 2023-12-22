@@ -3,7 +3,11 @@
   <div class="results-container">
     <% results.each do |provider| %>
       <div class="result-item">
-        <b>Provider name:</b> <%= link_to provider.provider_name, provider_path(provider.id, category: category) %><br>
+        <% if logged_in? %>
+          <b>Provider name:</b> <%= link_to provider.provider_name, provider_path(provider.id, category: category) %><br>
+        <% else %>
+          <b>Provider name:</b> <%= provider.provider_name %><br>
+        <% end %>
         <b>Address:</b> <a href="https://www.google.com/maps?q=<%= provider.provider_name %>,<%= provider.street %>,<%= provider.city %>,<%= provider.state %>", target="_blank"><%= provider.street %>, <%= provider.city %>, <%= provider.state %></a><br>
         <b>Description:</b> <%= provider.description %>
       </div>
