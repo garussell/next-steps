@@ -319,7 +319,7 @@ DEPENDENCIES
   omniauth-google-oauth2
   omniauth-rails_csrf_protection
   pg (~> 1.1)
-  prawn
+  prawn (~> 2.2, >= 2.2.2)
   pry
   puma (~> 5.0)
   rails (~> 7.0.7, >= 7.0.7.2)

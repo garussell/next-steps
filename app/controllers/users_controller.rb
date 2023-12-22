@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find_by(id: params[:id])
+    @user = current_user || User.find_by(id: params[:id])
     @favorites = @user.favorites if @user
     @providers = Provider.where(id: @user.provider_id.to_i) unless @user.nil?
     if @user.nil? || current_user != @user
