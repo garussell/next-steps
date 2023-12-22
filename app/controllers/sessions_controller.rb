@@ -2,10 +2,10 @@ class SessionsController < ApplicationController
 
   def omniauth
     if user = User.from_omniauth(request.env['omniauth.auth'])
-      if user.role == "admin"
+      if user && user.role == "admin"
         login(user)
         redirect_to admin_dashboard_index_path
-      else
+      elsif user
         login(user)
         redirect_to user_path(user)
       end
