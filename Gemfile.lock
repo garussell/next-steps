@@ -315,6 +315,7 @@ DEPENDENCIES
   importmap-rails
   jsonapi-serializer
   launchy
+  matrix (= 0.4.2)
   omniauth
   omniauth-google-oauth2
   omniauth-rails_csrf_protection
