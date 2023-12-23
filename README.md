@@ -1,7 +1,7 @@
 # Next Steps - Project README
 ### Monolith
 
-Video Walkthrough: [Next Step 2min Walkthrough](https://www.loom.com/share/aced697b0fc64f9898efc1635ada3bd0)<br/>
+Video Walkthrough: [2min Video Walkthrough](https://www.loom.com/share/aced697b0fc64f9898efc1635ada3bd0)<br/>
 Deployment Link: [Next Steps](https://next-steps-xu92.onrender.com/)
 
 Link to original [Front-end Service](https://github.com/westonio/next-steps-front-end)<br/>
