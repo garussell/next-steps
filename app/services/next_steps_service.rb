@@ -23,6 +23,6 @@ class NextStepsService
   end
   
   def self.conn
-    Faraday.new(url: "https://next-steps-7c28fd4f1d30.herokuapp.com/api/v0/")
+    Faraday.new(url: Rails.application.credentials.next_steps[:API_PATH])
   end
 end
