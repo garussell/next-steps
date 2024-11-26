@@ -81,6 +81,7 @@ test:
 #
 production:
   <<: *default
+  url: Rails.application.credentials.production.DATABASE_URL
   database: next_steps_front_end_production
   username: next_steps_front_end
   password: <%= ENV["NEXT_STEPS_FRONT_END_DATABASE_PASSWORD"] %>
