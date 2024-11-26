@@ -34,6 +34,9 @@ Rails.application.routes.draw do
 
   resources :users, only: [:index, :show, :new, :create, :edit, :update, :destroy] do
     resources :favorites, only: [:index, :create, :destroy]
+    member do 
+      get 'generate_pdf'
+    end
   end
 
   # BE Routes

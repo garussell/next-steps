@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find_by(id: params[:id])
+    @user = current_user || User.find_by(id: params[:id])
     @favorites = @user.favorites if @user
     @providers = Provider.where(id: @user.provider_id.to_i) unless @user.nil?
     if @user.nil? || current_user != @user
@@ -58,6 +58,17 @@ class UsersController < ApplicationController
     session[:user_id] = nil
     flash[:success] = "Your account has been successfully deleted."
     redirect_to root_path
+  end
+  
+  def generate_pdf
+    @user = current_user 
+    @favorites = @user.favorites if @user
+
+    pdf_filename = "#{@user.username}-Dashboard.pdf"
+    pdf_file = Rails.root.join('tmp', pdf_filename)
+  
+    new_pdf = PdfGeneratorService.generate_pdf(@user, @favorites, pdf_file)
+    send_file(pdf_file, filename: pdf_filename, type: 'application/pdf', disposition: 'inline')
   end
   
   private

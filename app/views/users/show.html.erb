@@ -1,4 +1,6 @@
 <h2>User Dashboard</h2>
+<%= link_to "Export to PDF", generate_pdf_user_path(@user), class: "btn btn-primary float-end" %>
+
 <p>Your Username: <%= current_user.username %></p>
 <p>[<%= link_to "Change password", edit_user_path(current_user) %>]</p>
 
@@ -7,7 +9,7 @@
 <% end %>
 <br/>
 
-<% if current_agent? %>
+<% if current_user  %>
   <% if @favorites.empty? %>
     <p><%= link_to 'Add Favorite Providers', root_path %></p>
   <% else %>
