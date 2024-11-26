@@ -2,7 +2,7 @@
 ### Monolith
 
 Video Walkthrough: [2min Video Walkthrough](https://www.loom.com/share/aced697b0fc64f9898efc1635ada3bd0)<br/>
-Deployment Link: [Next Steps](https://next-steps-xu92.onrender.com/)
+Deployment Link: [Next Steps]([https://next-steps-xu92.onrender.com/](https://next-steps-7c28fd4f1d30.herokuapp.com/))
 
 Link to original [Front-end Service](https://github.com/westonio/next-steps-front-end)<br/>
 Link to original [Back-End Service](https://github.com/westonio/next-steps-back-end)
