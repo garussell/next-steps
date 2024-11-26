@@ -8,7 +8,7 @@
       <% results[0..2].each do |provider| %>
         <div class="result-item">
           <% if provider.present? %>
-            <b>Provider name:</b> <%= link_to provider.provider_name, provider_path(provider.id, category: category) %><br>
+            <b>Provider name:</b><%= !current_user ? provider.provider_name : link_to(provider.provider_name, provider_path(provider.id, category: category)) %><br>
             <b>Address:</b> <a href="https://www.google.com/maps?q=<%= provider.provider_name %>,<%= provider.street %>,<%= provider.city %>,<%= provider.state %>" target="_blank"><%= provider.street %>, <%= provider.city %>, <%= provider.state %></a><br>
             <b>City:</b> <%= provider.city %><br>
             <b>Description:</b> <%= provider.description[0, 100] %>...
